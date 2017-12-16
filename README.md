@@ -6,8 +6,8 @@ Javascript
 Babel-env  
 Webpack-dev-server  
 Rimraf  
-file-loader  
-image-webpack-loader  
+File-loader  
+Image-webpack-loader  
 
 Optional:  
 Hot Module Replacement  
