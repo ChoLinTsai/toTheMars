@@ -1,3 +1,5 @@
 const css = require('../css/app.scss');
 
-console.log("hello from webpack dev server");
+const hello = () => console.log("arrow func return hello world!");
+
+hello();
