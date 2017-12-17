@@ -1,8 +1,9 @@
 HTML  
 CSS  
 Sass  
-Boostrap  
+Boostrap3  
 Javascript  
+jQuery
 Babel-env  
 Webpack-dev-server  
 Rimraf  

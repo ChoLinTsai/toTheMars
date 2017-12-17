@@ -3,30 +3,39 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 const path = require('path');
 
-// const isProd = process.env.NODE_ENV === 'production'; //true | false
-// const cssDev = ['style-loader', 'css-loader', 'sass-loader'];
-// const cssProd = ExtractTextPlugin.extract({
-// 									fallback: 'style-loader',
-// 									use: ['css-loader', 'sass-loader'],
-// 								});
-// const cssConfig = isProd ? cssProd : cssDev;
+const bootstrapEntryPoints = require('./webpack.bootstrap.config');
 
 
+const isProd = process.env.NODE_ENV === 'production'; //true | false
+const cssDev = ['style-loader', 'css-loader', 'sass-loader'];
+const cssProd = ExtractTextPlugin.extract({
+									fallback: 'style-loader',
+									use: ['css-loader', 'sass-loader'],
+								});
+const cssConfig = isProd ? cssProd : cssDev;
+
+const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;
 
 module.exports = {
-	entry: './src/js/app.js',
+	entry: {
+		app: './src/js/app.js',
+		bootstrap: bootstrapConfig
+	},
+	stats: { //optional settings
+		children: false,
+		assets: false,
+		chunks: false,
+		timings: true,
+	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: './js/app.bundle.js'
+		filename: './js/[name].bundle.js'
 	},
 	module: {
 		rules: [
 			{
 				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
-							fallback: 'style-loader',
-							use: ['css-loader', 'sass-loader'],
-						})
+				use: cssConfig
 			},
 			{
 				test: /\.js$/,
@@ -34,21 +43,35 @@ module.exports = {
 				use: "babel-loader"
 			},
 			{
-				test: /\.(jpe?g|png|gif|svg)$/i,
+				test: /\.(jpe?g|png|gif)$/i,
 				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].[ext]',
-							publicPath: '../',
-							outputPath: 'img/'
-						}
-					},
-					{
-						loader: "image-webpack-loader"
-					}
+						'file-loader?name=img/[name].[ext]',
+						'image-webpack-loader'
+					// {
+					// 		loader: 'file-loader',
+					// 		options: {
+					// 			name: '[name].[ext]',
+					// 			publicPath: '../',
+					// 			outputPath: 'img/'
+					// 		}
+					// },
+					// {
+					// 	loader: "image-webpack-loader"
+					// }
 				]
-			}
+			},
+			{
+				test: /\.(woff2?|svg)$/,
+				loader: 'url-loader?limit=10000&name=fonts/[name].[ext]'
+			},
+    	{
+				test: /\.(ttf|eot)$/,
+				loader: 'file-loader?name=fonts/[name].[ext]'
+			},
+			{
+				test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
+				loader: 'imports-loader?jQuery=jquery'
+			},
 		]
 	},
 	devServer: {
@@ -70,9 +93,18 @@ module.exports = {
 			}
 		}),
 		new ExtractTextPlugin({
-			filename: './css/app.css',
-			disable: false,
+			filename: './css/[name].css',
+			disable: !isProd,
 			allChunks: true
-		})
+		}),
+		// new webpack.ProvidePlugin({
+		// 	$: 'jquery',
+    //   jQuery: 'jquery',
+    //   'window.jQuery': 'jquery',
+    //   Popper: ['popper.js', 'default'],
+    //   Util: "exports-loader?Util!bootstrap/js/dist/util",
+    //   Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+		// 	Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
+		// })
 	]
 }
