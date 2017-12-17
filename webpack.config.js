@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require('webpack');
 const path = require('path');
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 const bootstrapEntryPoints = require('./webpack.bootstrap.config');
 
@@ -97,6 +99,9 @@ module.exports = {
 			disable: !isProd,
 			allChunks: true
 		}),
+		new PurifyCSSPlugin({
+      paths: glob.sync(path.join(__dirname, 'src/*.html')),
+    })
 		// new webpack.ProvidePlugin({
 		// 	$: 'jquery',
     //   jQuery: 'jquery',
