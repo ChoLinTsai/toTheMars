@@ -2,6 +2,7 @@ HTML
 CSS  
 Sass  
 Boostrap3  
+Purifycss  
 Javascript  
 jQuery
 Babel-env  
