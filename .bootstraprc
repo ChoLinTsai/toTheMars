@@ -12,6 +12,7 @@ useCustomIconFontPath: false
 styleLoaders:
   - style
   - css
+  - postcss
   - sass
 
 # Extract styles to stand-alone css file
