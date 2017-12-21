@@ -1,5 +1,13 @@
 const css = require('../css/app.scss');
 
-const hello = () => console.log("arrow func return hello world!");
+const viewShoe = document.getElementById('btn-view');
 
-hello();
+
+
+function showShoe() {
+
+}
+
+
+
+viewShoe.addEventListener('click', showShoe);
