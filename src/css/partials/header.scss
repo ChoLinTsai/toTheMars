@@ -10,7 +10,6 @@ header#header-container {
 		max-width: 450px;
 		max-height: 400px;
 		grid-column: header-start / header-center;
-		border: 2px solid blue;
 		padding: 1rem;
 		overflow: hidden;
 		display: flex;
@@ -23,10 +22,8 @@ header#header-container {
 			position: relative;
 		}
 		div#header-view-shoe {
-			display: none;
 			width: 450px;
 			height: 400px;
-			border: 2px solid black;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -35,6 +32,17 @@ header#header-container {
 			background-position: center center;
 			background-size: cover;
 			z-index: 1;
+			.closebtn {
+				cursor: pointer;
+				position: absolute;
+				left: 10px;
+				font-size: 40px;
+				color: #5C636E;
+				opacity: 0.15;
+				&:hover {
+					opacity: 0.75;
+				}
+			}
 		}
 		h1 {
 			color: #5C636E;
@@ -67,5 +75,21 @@ header#header-container {
 		background-position: right center;
 		background-size: cover;
 		filter: grayscale(40%);
+		z-index: 1
 	}
 }
+
+.slide-in {
+	opacity: 0;
+	z-index: -1;
+	transition: 0.55s ease;
+}
+
+.align-bottom.slide-in {
+	transform:translateX(100%);
+}
+
+.slide-in.active {
+	opacity: 1;
+	transform: translateX(0%);
+ }
