@@ -7,17 +7,38 @@
 	<title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+	<!-- Master container for wrapping all tags -->
 	<div id="master-container">
+		<!-- Header container -->
 		<header id="header-container">
 				<h1 id="header-h1">To The <span>Mars</span></h1>
 				<p id="header-p">Join The New<br>Civilization<br>NOW</p>
-				<p id="header-arrow">Sroll &darr;</p>
+				<p class="header-arrow arrow-animation">Sroll &darr;</p>
 		</header>
 
+		<!-- aside container -->
+		<aside id="aside-container">
+			<div id="aside-panel">
+				<section id="aside-section-1" class="aside-content">
+						<h1>Total Safty</h1>
+						<p>Zero accident. Zero casualty. We keep this record since the first human set a foot on Mars! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolor!</p>
+				</section>
+				<section id="aside-section-2" class="aside-content set-to-left">
+						<h1>Power Free</h1>
+						<p>We harness solor energy and local resources to power everything we need on Mars. It is all FREE. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolor!</p>
+				</section>
+				<section id="aside-section-3" class="aside-content set-to-right">
+						<h1>Unlimited Supplies</h1>
+						<p>Unmanned drones regularly ship food and water from Earth. We have everything you need to live on Mars. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolor!</p>
+				</section>
+			</div>
+		</aside>
 
-
-
-
+		<!-- Main container -->
+		<main id="main-container">
+			<h1 id="main-h1">Become a Martian Citizen</h1>
+			<p id="main-p">A New Life on MARS<br> You Can Be One of The Millions</p>
+		</main>
 
 		<div class="placeholder">
 			<h1>placeholder</h1>

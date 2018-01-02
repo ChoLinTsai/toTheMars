@@ -37,7 +37,7 @@ header#header-container {
 		@include gridColRow(col-3,col-6,row-4,row-6);
 		transition: all 0.3s ease-in-out;
 	}
-	p#header-arrow {
+	p.header-arrow {
 		position: absolute;
 		margin: 0;
 		padding: 0;
@@ -64,5 +64,24 @@ header#header-container {
 
 .header-arrow-fade-out {
 	opacity: 0;
-	transform: translateY(-50%);
+	transform: translateY(-50%) scale(1.5);
+}
+
+.arrow-animation {
+	animation: redArrow 1.5s infinite ease-in-out forwards;
+}
+
+@keyframes redArrow {
+	0% {
+		color: white;
+		transform: scale(1.1);
+	}
+	50% {
+		color: #EE2B47;
+		transform: scale(1.15);
+	}
+	100% {
+		color: white;
+		transform: scale(1.1);
+	}
 }

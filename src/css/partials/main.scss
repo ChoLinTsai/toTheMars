@@ -1,0 +1,10 @@
+main#main-container {
+	@include wh(normal, 100vw, 100vh);
+	@include bgimg('../img/main-bg.jpg',
+	no-repeat, center, center, cover);
+	background-attachment: fixed;
+	h1#main-h1 {
+		margin: 0;
+		padding: 0;
+	}
+}
