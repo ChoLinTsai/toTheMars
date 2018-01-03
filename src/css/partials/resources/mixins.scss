@@ -57,9 +57,17 @@
 }
 
 /* for background properties */
-@mixin bgimg($url, $repeat, $positionX, $positionY, $size) {
+@mixin bgimg($url, $repeat, $positionX, $positionY, $size, $attachment:scroll) {
 	background-image: url($url);
 	background-repeat: $repeat;
 	background-position: $positionX $positionY;
 	background-size: $size;
+	background-attachment: $attachment;
+}
+
+/* flexbox mixin */
+@mixin flex($main, $cross) {
+	display: flex;
+	justify-content: $main;
+	align-items: $cross;
 }
