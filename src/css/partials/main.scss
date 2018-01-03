@@ -1,0 +1,55 @@
+main#main-container {
+	@include wh(normal, 100vw, 100vh);
+	@include bgimg('../img/main-bg.jpg',
+	no-repeat, center, center, cover, fixed);
+	div#main-wrapper {
+		@include wh(normal, 100vw, 100vh);
+		@include gridTempColsRows(8);
+		position: fixed;
+		top: 0;
+		left: 0;
+		h1#main-h1 {
+			@include wh(normal, 100%, 100%);
+			@include gridColRow(col-2, col-8, row-5, row-6);
+			margin: 0;
+			padding: 0;
+			color: white;
+			font-family: 'exo2-black';
+			font-size: 7rem;
+			text-transform: uppercase;
+			text-align: center;
+			transition: all 0.25s ease-in-out;
+		}
+		p#main-p {
+			@include wh(normal, 100%, 100%);
+			@include gridColRow(col-3, col-7, row-6, row-7);
+			color: white;
+			font-family: 'exo2-black';
+			font-size: 5rem;
+			text-align: center;
+			transition: all 0.25s ease-in-out;
+		}
+	}
+}
+
+.main-h1-offsetY {
+	opacity: 0;
+	transform: translateY(50%);
+}
+
+.main-h1-pushup {
+	transform: translateY(-300%) scale(1.25);
+}
+
+.main-h1-hide {
+	opacity: 0;
+}
+.main-p-offsetY {
+	opacity: 0;
+	transform: translateY(50%);
+}
+
+.main-p-offsetY-up {
+	opacity: 0;
+	transform: translateY(-50%);
+}

@@ -2,11 +2,14 @@ const css = require('../css/app.scss');
 
 // listen window scroll event
 window.addEventListener('scroll', () => {
+
+	/**
+	*  Header section javascript
+	**/
 	// get window scrollY value
 	let wScrollY = window.top.scrollY;
 	// set event trigger value
 	let triggerHeight = 200;
-	let arrowTriggerHeight = 100;
 	// get #header h1 and .header-h1-slide-right
 	let headerH1 = document.querySelector('#header-h1');
 	let h1SlideRight = 'header-h1-slide-right';
@@ -15,11 +18,12 @@ window.addEventListener('scroll', () => {
 	let headerP = document.querySelector('#header-p');
 	let pSlideRight = 'header-p-slide-right';
 
-  // get #header-arrow and arrow
-	let headerArrow = document.querySelector('#header-arrow');
+  // get #header-arrow and arrow and arrow-animation
+	let headerArrow = document.querySelector('.header-arrow');
 	let arrowFadeOut = 'header-arrow-fade-out'
+	let arrowAnimation = 'arrow-animation'
 
-	// check if wScroll >|< triggerHeight to add|remove .h1SlideRight .pSlideRight
+	// check if true to add|remove .h1SlideRight .pSlideRight
 	if( wScrollY >= triggerHeight ) {
 		headerH1.classList.add(h1SlideRight);
 		headerP.classList.add(pSlideRight);
@@ -28,12 +32,84 @@ window.addEventListener('scroll', () => {
 		headerP.classList.remove(pSlideRight);
 	}
 
-  // check if wScroll > arrowTriggerHeight to fade out #header-arrow
-	if ( wScrollY > arrowTriggerHeight ) {
+  // check if true to fade out #header-arrow
+	if ( wScrollY >= triggerHeight / 2  ) {
 		headerArrow.classList.add(arrowFadeOut);
 	} else {
 		headerArrow.classList.remove(arrowFadeOut);
 	}
 
-	console.log(wScrollY);
+  // check if true to stop arrow animation before arrow fadeout
+	if (wScrollY >= triggerHeight / 2.1 ) {
+		headerArrow.classList.remove(arrowAnimation);
+	} else {
+		headerArrow.classList.add(arrowAnimation);
+	}
+
+	/**
+	* Aside section javascript
+	**/
+ 	let asideSection2 = document.querySelector('#aside-section-2');
+	let asideSection3 = document.querySelector('#aside-section-3');
+	let asideTriggerPoint = 300;
+	let asideDelay = 200;
+  // check if true to show aside content
+	if (wScrollY > asideTriggerPoint) {
+		asideSection2.classList.remove('set-to-left');
+		setTimeout( () => {
+			asideSection3.classList.remove('set-to-right');
+		}, asideDelay)
+	}
+
+	/**
+	*  main section javascript
+	**/
+
+	// set trigger point and get #main-p
+	let mainWrapper = document.querySelector('#main-wrapper');
+	let mainPtoShow = 900;
+	let mainPtoHide = 1650;
+	let mainP = document.querySelector('#main-p');
+  // check conditions to show/hide main-p
+	switch (true) {
+		// control #main-p show/hide
+		case wScrollY > mainPtoShow && wScrollY < mainPtoHide:
+			mainP.classList.remove('main-p-offsetY', 'main-p-offsetY-up');
+			break;
+		case wScrollY < mainPtoShow:
+			mainP.classList.add('main-p-offsetY');
+			break;
+		case wScrollY > mainPtoHide:
+			mainP.classList.add('main-p-offsetY-up');
+			break;
+		default:
+	}
+
+	// set trigger point and get #main-h1
+	let mainH1toShow = 1000;
+	let mainH1toPushUp = 1700;
+	let mainH1toHide = 2100;
+	let mainH1 = document.querySelector('#main-h1');
+  // check conditions to show/hide main-h1
+	switch (true) {
+		// controll #main-h1 show/hide/pushup
+		case wScrollY > mainH1toShow && wScrollY < mainH1toPushUp:
+			mainH1.classList.remove('main-h1-offsetY', 'main-h1-pushup');
+			break;
+		case wScrollY < mainH1toShow:
+			mainH1.classList.add('main-h1-offsetY');
+			break;
+		case wScrollY > mainH1toPushUp && wScrollY < mainH1toHide:
+			mainH1.classList.add('main-h1-pushup');
+			mainH1.classList.remove('main-h1-hide');
+			break;
+		case wScrollY > mainH1toHide:
+			mainH1.classList.add('main-h1-hide');
+			break;
+		default:
+	}
+
+
+
+	// console.log(wScrollY);
 })
