@@ -1,0 +1,20 @@
+article#article-container {
+	@include wh(normal, 100vw, 500px);
+	@include flex(center, center);
+	background: #35B0AB;
+	h2#article-h2 {
+		color: #fff;
+		font-family: 'exo2-black';
+		font-size: 5rem;
+		transition: all 0.25s ease-in-out;
+	}
+}
+
+.article-h2-scale {
+	transform: scale(1.5);
+}
+
+.h2-transform {
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+}

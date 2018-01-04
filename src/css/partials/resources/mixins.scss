@@ -71,3 +71,8 @@
 	justify-content: $main;
 	align-items: $cross;
 }
+
+@mixin gridItemPosition($justify, $align) {
+	justify-self: $justify;
+	align-self: $align;
+}
