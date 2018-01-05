@@ -37,6 +37,7 @@ const cssProd = ExtractTextPlugin.extract({
 													'postcss-loader'
 									],
 								});
+
 const cssConfig = isProd ? cssProd : cssDev;
 
 const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoints.dev;

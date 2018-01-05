@@ -1,0 +1,50 @@
+section#section-landing-container {
+	@include wh(normal, 100vw, 500px);
+	background: #0881A3;
+	overflow: hidden;
+	@include flex(flex-start, center);
+	flex-direction: column;
+	h2#section-landing-h2 {
+			margin: 0;
+			padding-top: 5rem;
+			color: #fff;
+			font-family: 'exo2-black';
+			font-size: 5rem;
+			text-transform: uppercase;
+			transition: all 0.35s ease-in-out;
+	}
+	p#section-landing-p {
+		margin: 0;
+		padding-top: 5rem;
+		color: #fff;
+		font-family: 'exo2-black';
+		font-size: 7rem;
+		text-transform: uppercase;
+		transition: all 0.35s ease-in-out;
+	}
+}
+
+.sec-landing-h2-offset {
+	opacity: 0;
+	transform: translateY(-100%);
+}
+
+.sec-lading-h2-pushdown {
+	transform: translateY(300%);
+}
+
+
+.sec-landing-p-offset {
+	opacity: 0;
+	transform: translateY(-150%);
+}
+
+.sec-landing-h2-hide {
+	opacity: 0;
+	transform: translateX(20%) translateY(300%);
+}
+
+.sec-landing-p-hide {
+	opacity: 0;
+	transform: translateY(-100%);
+}

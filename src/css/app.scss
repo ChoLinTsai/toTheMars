@@ -1,4 +1,3 @@
-@import '../bootstrap/customizations.scss';
 
 @import "./partials/master.scss";
 @import "./partials/resources/fonts.scss";
@@ -11,3 +10,15 @@
 
 /* main style */
 @import "./partials/main.scss";
+
+/* article style */
+@import "./partials/article.scss";
+
+/* section begin style*/
+@import "./partials/section-begin.scss";
+
+/* section landing style*/
+@import "./partials/section-landing.scss";
+
+/* section onground style*/
+@import "./partials/section-onground.scss";

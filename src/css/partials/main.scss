@@ -18,7 +18,7 @@ main#main-container {
 			font-size: 7rem;
 			text-transform: uppercase;
 			text-align: center;
-			transition: all 0.25s ease-in-out;
+			transition: all 0.35s ease-in-out;
 		}
 		p#main-p {
 			@include wh(normal, 100%, 100%);
@@ -38,6 +38,7 @@ main#main-container {
 }
 
 .main-h1-pushup {
+	letter-spacing: 0.75rem;
 	transform: translateY(-300%) scale(1.25);
 }
 

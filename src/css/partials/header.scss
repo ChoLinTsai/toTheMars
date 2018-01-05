@@ -37,12 +37,12 @@ header#header-container {
 		position: absolute;
 		margin: 0;
 		padding: 0;
-		left: 0;
+		right: -25%;
 		bottom: 0;
 		color: white;
 		font-size: 2rem;
 		font-family: 'roboto-medium';
-		@include gridColRow(col-5,col-6,row-8,row-9);
+		@include gridColRow(col-4,col-5,row-8,row-9);
 		transition: all 0.25s ease-in-out;
 	}
 }
