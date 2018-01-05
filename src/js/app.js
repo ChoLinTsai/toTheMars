@@ -2,14 +2,14 @@ const css = require('../css/app.scss');
 
 // for reducing scroll request
 function debounce(func, wait, immediate) {
-	var timeout;
+	let timeout;
 	return function() {
-		var context = this, args = arguments;
-		var later = function() {
+		let context = this, args = arguments;
+		let later = function() {
 			timeout = null;
 			if (!immediate) func.apply(context, args);
 		};
-		var callNow = immediate && !timeout;
+		let callNow = immediate && !timeout;
 		clearTimeout(timeout);
 		timeout = setTimeout(later, wait);
 		if (callNow) func.apply(context, args);
@@ -157,31 +157,108 @@ function checkScroll() {
 	}
 
 
-  /**
-   * section begin js
-  **/
-	let secBeginTriPt = 2400;
+	/**
+	 * section begin js
+	**/
+  // get section begin wrapper and h1
 	let secBeginWrapper = $select('#section-begin-wrapper');
 	let secBeginH1 = $select('#section-begin-h1');
-
+  // check if true to hide fixed wrapper
 	if (wScrollY < 2150) {
 		$addClsls(secBeginWrapper, 'hidden');
-	} else if ( wScrollY > 3200 ){
+	} else if ( wScrollY > 3600 ){
 		$addClsls(secBeginWrapper, 'hidden');
 	} else {
 		$rmClsls(secBeginWrapper, 'hidden');
 	}
-
+  // control section begin h1 movements
 	switch (true) {
-		case wScrollY > 2200:
-			$rmClsls(secBeginH1, 'sec-begin-h1-offset');
+		case wScrollY > 2200 && wScrollY < 2450:
+			$rmClsls(secBeginH1, 'sec-begin-h1-offset', 'sec-begin-h1-pushup');
 			break;
 		case wScrollY < 2200:
 			$addClsls(secBeginH1, 'sec-begin-h1-offset');
 			break;
+		case wScrollY > 2450 && wScrollY < 2850:
+			$rmClsls(secBeginH1, 'sec-begin-h1-topright');
+			$addClsls(secBeginH1, 'sec-begin-h1-pushup');
+			break;
+		case wScrollY > 2850 && wScrollY < 3500:
+			$rmClsls(secBeginH1, 'sec-begin-h1-hide');
+			$addClsls(secBeginH1, 'sec-begin-h1-topright');
+			break;
+		case wScrollY > 3500:
+			$addClsls(secBeginH1, 'sec-begin-h1-hide');
+			break;
+		default:
+	}
+
+  // get section begin p
+	let secBeginP = $select('#section-begin-p');
+
+  // control section begin p movements
+	switch (true) {
+		case wScrollY < 2475:
+			$addClsls(secBeginP, 'sec-begin-p-offset');
+			break;
+		case wScrollY > 2475 && wScrollY < 2850:
+			$rmClsls(secBeginP, 'sec-begin-p-offset', 'sec-begin-p-push');
+			break;
+		case wScrollY > 2850 && wScrollY < 3100:
+			$addClsls(secBeginP, 'sec-begin-p-push');
+			$rmClsls(secBeginP, 'sec-begin-p-hide');
+			break;
+		case wScrollY > 3100:
+			$addClsls(secBeginP, 'sec-begin-p-hide');
+		default:
+	}
+
+
+  // get section ladning h1
+	let secLandingH2 = $select('#section-landing-h2');
+	let secLandingP = $select('#section-landing-p ');
+
+	switch (true) {
+		case wScrollY < 3150:
+			$addClsls(secLandingH2, 'sec-landing-h2-offset');
+			break;
+		case wScrollY > 3150 && wScrollY < 3550:
+  		$rmClsls(secLandingH2, 'sec-landing-h2-offset', 'sec-lading-h2-pushdown');
+			$addClsls(secLandingP, 'sec-landing-p-offset');
+			break;
+		case wScrollY > 3550 && wScrollY < 4000:
+			$addClsls(secLandingH2, 'sec-lading-h2-pushdown');
+			$rmClsls(secLandingP, 'sec-landing-p-offset', 'sec-landing-p-hide');
+			$rmClsls(secLandingH2, 'sec-landing-h2-hide');
+			break;
+		case wScrollY > 4000:
+			$addClsls(secLandingH2, 'sec-landing-h2-hide');
+			$addClsls(secLandingP, 'sec-landing-p-hide');
 		default:
 
 	}
+
+  // get section onground h2 and p
+	let secOnGrdH2 = $select('#section-onground-h2');
+	let secOnGrdP = $select('#section-onground-p');
+
+	switch (true) {
+		case wScrollY < 4000:
+			$addClsls(secOnGrdH2, 'sec-ongrd-h2-offset');
+			$addClsls(secOnGrdP, 'sec-ongrd-p-offset');
+			break;
+		case wScrollY > 4000 && wScrollY < 4400:
+			$rmClsls(secOnGrdH2, 'sec-ongrd-h2-offset');
+			$rmClsls(secOnGrdP, 'sec-ongrd-p-offset');
+			break;
+		case wScrollY > 4400:
+			$addClsls(secOnGrdH2, 'sec-ongrd-h2-offset');
+			$addClsls(secOnGrdP, 'sec-ongrd-p-offset');
+			break;
+		default:
+
+	}
+
 
 	// console.log(wScrollY);
 
