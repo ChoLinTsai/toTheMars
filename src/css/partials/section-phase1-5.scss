@@ -1,0 +1,7 @@
+section#section-phase1-5-container{
+	@include wh(normal, 100vw, 500px);
+	background: #333;
+	@include flex(center, center);
+	flex-direction: column;
+	color: #fff;
+}

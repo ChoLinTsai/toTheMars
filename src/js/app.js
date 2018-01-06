@@ -213,7 +213,9 @@ function checkScroll() {
 		default:
 	}
 
-
+	/**
+	 * section landing js
+	**/
   // get section ladning h1
 	let secLandingH2 = $select('#section-landing-h2');
 	let secLandingP = $select('#section-landing-p ');
@@ -238,6 +240,9 @@ function checkScroll() {
 
 	}
 
+	/**
+	 * section onground js
+	**/
   // get section onground h2 and p
 	let secOnGrdH2 = $select('#section-onground-h2');
 	let secOnGrdP = $select('#section-onground-p');
@@ -259,6 +264,71 @@ function checkScroll() {
 
 	}
 
+  /**
+   * section phase 1 js
+  **/
+  // get section phase 1 elements
+	let secPhase1H2 = $select('#section-phase1-h2');
+	let secPhase1P = $select('#section-phase1-p');
+
+  // control secPhase1H2 movements
+	switch (true) {
+		case wScrollY < 4600 || wScrollY > 5400:
+			$addClsls(secPhase1H2, 'sec-phase1-h2-offset');
+			break;
+		case wScrollY > 4600 && wScrollY < 5400:
+			$rmClsls(secPhase1H2, 'sec-phase1-h2-offset');
+			break;
+		default:
+	}
+
+  // control secPhase1P movements
+	switch (true) {
+		case wScrollY < 4750 || wScrollY > 5600:
+			$addClsls(secPhase1P, 'sec-phase1-p-offset');
+			break;
+		case wScrollY > 4750 && wScrollY < 5600:
+			$rmClsls(secPhase1P, 'sec-phase1-p-offset');
+			break;
+		default:
+	}
+
+
+	/**
+	 * section colonise js
+	**/
+  // get section colony elements
+	let secColonyH1 = $select('#section-colony-h1');
+	let secColonyH2 = $select('#section-colony-h2');
+  // control section colony h1 h2 movements
+	switch (true) {
+		case wScrollY < 5600:
+			$addClsls(secColonyH1, 'sec-colony-h-offset');
+			setTimeout( () => {
+				$addClsls(secColonyH2, 'sec-colony-h-offset');
+			}, 200)
+			break;
+		case wScrollY > 5600:
+			$rmClsls(secColonyH1, 'sec-colony-h-offset');
+			setTimeout( () => {
+				$rmClsls(secColonyH2, 'sec-colony-h-offset');
+			}, 200)
+			break;
+		default:
+	}
+
+  // get section colnoy ul
+	let secColonyul = $select('#section-colony-ul')
+  // control section colony ul movements
+	switch (true) {
+		case wScrollY < 5700:
+			$addClsls(secColonyul, 'sec-colony-ul-offset');
+			break;
+		case wScrollY > 5700:
+			$rmClsls(secColonyul, 'sec-colony-ul-offset');
+			break;
+		default:
+	}
 
 	// console.log(wScrollY);
 
