@@ -4,4 +4,52 @@ section#section-underground-container {
 	no-repeat, center, bottom, cover, fixed);
 	overflow: hidden;
 	color: #F6C667;
+	@include gridTempColsRows(12);
+	grid-row-gap: 1rem;
+	h1#section-underground-h1 {
+		margin: 0;
+		padding: 0;
+		@include gridColRow(col-9,col-12,row-3,row-4);
+		@include gridItemPosition(start, center);
+		font-family: 'exo2-black';
+		font-size: 7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		transition: all 0.35s ease-in-out;
+	}
+	h2#section-underground-h2 {
+		margin: 0;
+		padding: 0;
+		@include gridColRow(col-9,col-12,row-4,row-5);
+		@include gridItemPosition(start, start);
+		font-family: 'exo2-black';
+		font-size: 6rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		transition: all 0.35s ease-in-out;
+	}
+	ul#section-underground-ul {
+		@include gridColRow(col-9,col-12,row-5,row-6);
+		@include gridItemPosition(start, start);
+		padding-left: 0;
+		font-size: 4rem;
+		list-style-type: none;
+		transition: all 0.35s ease-in-out;
+	}
+}
+
+
+.sec-under-h1-offset {
+	opacity: 0;
+	transform: translateX(50%);
+}
+
+.sec-under-h2-offset {
+	opacity: 0;
+	transform: translateX(50%);
+}
+
+.sec-under-ul-offset {
+	opacity: 0;
+	transform: translateY(50%);
 }

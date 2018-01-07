@@ -3,5 +3,44 @@ section#section-phase1-5-container{
 	background: #333;
 	@include flex(center, center);
 	flex-direction: column;
-	color: #fff;
+	color: #F6C667;
+	div {
+		display: flex;
+		h2#section-phase1-5-h2 {
+			margin-bottom: 5rem;
+			font-family: 'exo2-black';
+			font-size: 10rem;
+			text-transform: uppercase;
+			letter-spacing: 0.5rem;
+			transition: all 0.35s ease-in-out;
+		}
+		h3#pt5 {
+			font-family: 'exo2-black';
+			font-size: 10rem;
+			text-transform: uppercase;
+			letter-spacing: 0.5rem;
+			transition: all 0.35s ease-in-out;
+		}
+	}
+	p#section-phase1-5-p {
+		font-family: 'roboto-black';
+		font-size: 8rem;
+		letter-spacing: 0.5rem;
+		transition: all 0.35s ease-in-out;
+	}
+}
+
+.sec-phase1-5-h2-offset {
+	opacity: 0;
+	transform: translateY(-50%);
+}
+
+.sec-phase1-5-p-offset {
+	opacity: 0;
+	transform: translateX(-50%);
+}
+
+.pt5-offset {
+	opacity: 0;
+	transform: translateX(100%);
 }
