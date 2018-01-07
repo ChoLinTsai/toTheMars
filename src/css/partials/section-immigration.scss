@@ -1,0 +1,6 @@
+section#section-immigration-container {
+	@include wh(normal, 100vw, 100vh);
+	@include bgimg('../img/section-immigration-bg.jpg',
+	no-repeat, center, bottom, cover, fixed);
+	overflow: hidden;
+}

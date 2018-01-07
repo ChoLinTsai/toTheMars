@@ -25,10 +25,10 @@ function $rmClsls(element, ...rmClass) {
 }
 // set func for select elements
 function $select(element) {
-	return document.querySelector(element);;
+	return document.querySelector(element);
 }
 
-// most of evnets written in this function
+// most of evnets are written in this function
 function checkScroll() {
 	/**
 	*  Header section javascript
@@ -213,7 +213,9 @@ function checkScroll() {
 		default:
 	}
 
-
+	/**
+	 * section landing js
+	**/
   // get section ladning h1
 	let secLandingH2 = $select('#section-landing-h2');
 	let secLandingP = $select('#section-landing-p ');
@@ -238,6 +240,9 @@ function checkScroll() {
 
 	}
 
+	/**
+	 * section onground js
+	**/
   // get section onground h2 and p
 	let secOnGrdH2 = $select('#section-onground-h2');
 	let secOnGrdP = $select('#section-onground-p');
@@ -258,6 +263,191 @@ function checkScroll() {
 		default:
 
 	}
+
+  /**
+   * section phase 1 js
+  **/
+  // get section phase 1 elements
+	let secPhase1H2 = $select('#section-phase1-h2');
+	let secPhase1P = $select('#section-phase1-p');
+
+  // control secPhase1H2 movements
+	switch (true) {
+		case wScrollY < 4600 || wScrollY > 5400:
+			$addClsls(secPhase1H2, 'sec-phase1-h2-offset');
+			break;
+		case wScrollY > 4600 && wScrollY < 5400:
+			$rmClsls(secPhase1H2, 'sec-phase1-h2-offset');
+			break;
+		default:
+	}
+
+  // control secPhase1P movements
+	switch (true) {
+		case wScrollY < 4750 || wScrollY > 5600:
+			$addClsls(secPhase1P, 'sec-phase1-p-offset');
+			break;
+		case wScrollY > 4750 && wScrollY < 5600:
+			$rmClsls(secPhase1P, 'sec-phase1-p-offset');
+			break;
+		default:
+	}
+
+
+	/**
+	 * section colonise js
+	**/
+  // get section colony elements
+	let secColonyH1 = $select('#section-colony-h1');
+	let secColonyH2 = $select('#section-colony-h2');
+  // control section colony h1 h2 movements
+	switch (true) {
+		case wScrollY < 5600:
+			$addClsls(secColonyH1, 'sec-colony-h-offset');
+			setTimeout( () => {
+				$addClsls(secColonyH2, 'sec-colony-h-offset');
+			}, 200)
+			break;
+		case wScrollY > 5600:
+			$rmClsls(secColonyH1, 'sec-colony-h-offset');
+			setTimeout( () => {
+				$rmClsls(secColonyH2, 'sec-colony-h-offset');
+			}, 200)
+			break;
+		default:
+	}
+
+  // get section colnoy ul
+	let secColonyul = $select('#section-colony-ul')
+  // control section colony ul movements
+	switch (true) {
+		case wScrollY < 5700:
+			$addClsls(secColonyul, 'sec-colony-ul-offset');
+			break;
+		case wScrollY > 5700:
+			$rmClsls(secColonyul, 'sec-colony-ul-offset');
+			break;
+		default:
+	}
+
+	/**
+	 * section phase 1.5 js
+	**/
+  // get section phase 1.5 h2 and p
+	let secPhasePt5H2 = $select('#section-phase1-5-h2');
+	let secPhasePt5P = $select('#section-phase1-5-p');
+	let pt5 = $select('#pt5');
+
+  // control section phase1.5 h2
+	switch (true) {
+		case wScrollY < 6000:
+			$addClsls(secPhasePt5H2, 'sec-phase1-5-h2-offset');
+			break;
+		case wScrollY > 6000:
+			$rmClsls(secPhasePt5H2, 'sec-phase1-5-h2-offset');
+			break;
+		default:
+	}
+  // control span#pt5 movements
+	if (wScrollY > 6150) {
+		$rmClsls(pt5, 'pt5-offset');
+	} else if (wScrollY < 6150) {
+		$addClsls(pt5, 'pt5-offset');
+	}
+  // control section phase1.5 p movements
+	switch (true) {
+		case wScrollY < 6200:
+			$addClsls(secPhasePt5P, 'sec-phase1-5-p-offset');
+			break;
+		case wScrollY > 6200:
+			$rmClsls(secPhasePt5P, 'sec-phase1-5-p-offset');
+			break;
+		default:
+	}
+
+  // control section phase 1.5 all to hide when enter next section
+	switch (true) {
+		case wScrollY > 7050:
+			$addClsls(secPhasePt5P, 'sec-phase1-5-p-offset');
+			break;
+		case wScrollY > 6850:
+			$addClsls(secPhasePt5H2, 'sec-phase1-5-h2-offset');
+			$addClsls(pt5, 'pt5-offset');
+			break;
+		default:
+	}
+
+  /**
+   * section city underground js
+  **/
+  // get city underground elements
+	let secUnderH1 = $select('#section-underground-h1');
+	let secUnderH2 = $select('#section-underground-h2');
+	let secUnderUl = $select('#section-underground-ul');
+
+  // control section city underground h1 h2
+	switch (true) {
+		case wScrollY > 7100:
+			$rmClsls(secUnderH1, 'sec-under-h1-offset');
+			setTimeout( () => {
+				$rmClsls(secUnderH2, 'sec-under-h2-offset');
+			}, 200)
+			break;
+		case wScrollY < 7100:
+			$addClsls(secUnderH1, 'sec-under-h1-offset');
+			setTimeout( () => {
+				$addClsls(secUnderH2, 'sec-under-h2-offset');
+			}, 200)
+			break;
+		default:
+	}
+
+  // control section city underground ul li
+	switch (true) {
+		case wScrollY > 7200:
+			$rmClsls(secUnderUl, 'sec-under-ul-offset');
+			break;
+		case wScrollY < 7200:
+			$addClsls(secUnderUl, 'sec-under-ul-offset');
+			break;
+		default:
+	}
+
+	/**
+	 * section phase 2 js
+	**/
+  // get section phase 2 elements
+	let secPhase2H1Trigger = 7550;
+	let secPhase2PTrigger = 7700;
+	let secPhase2H1 = $select('#section-phase2-h1');
+	let secPhase2P = $select('#section-phase2-p');
+	let secPhase2Offset = 'sec-phase2-offset';
+	// function for section phase to reuse
+	function sectionPhase(selectEle, eleClass, indexNum) {
+		switch (indexNum) {
+			case 0:
+				$addClsls(selectEle, eleClass);
+				break;
+			case 1:
+				$rmClsls(selectEle, eleClass);
+				break;
+			default:
+		}
+	}
+  // check if true to show #section-phase2-h1
+	if (wScrollY > secPhase2H1Trigger) {
+		sectionPhase(secPhase2H1, secPhase2Offset, 1)
+	} else if (wScrollY < secPhase2H1Trigger) {
+		sectionPhase(secPhase2H1, secPhase2Offset, 0)
+	}
+	// check if true to show #section-phase2-p
+	if (wScrollY > secPhase2PTrigger) {
+		sectionPhase(secPhase2P, secPhase2Offset, 1)
+	} else if (wScrollY < secPhase2PTrigger) {
+		sectionPhase(secPhase2P, secPhase2Offset, 0)
+	}
+
+
 
 
 	// console.log(wScrollY);

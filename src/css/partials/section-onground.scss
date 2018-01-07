@@ -4,11 +4,11 @@ section#section-onground-container {
 	no-repeat, center, bottom, cover, fixed);
 	overflow: hidden;
 	@include gridTempColsRows(8);
+	color: #F5FEFF;
 	h2#section-onground-h2 {
 		@include gridColRow(col-2,col-6,row-2,row-3);
 		margin: 0;
 		padding: 0;
-		color: #fff;
 		font-family: 'exo2-black';
 		font-size: 5rem;
 		text-transform: uppercase;
@@ -19,7 +19,6 @@ section#section-onground-container {
 		@include gridColRow(col-2,col-5,row-3,row-6);
 		margin: 0;
 		padding: 0;
-		color: #fff;
 		font-family: 'roboto-black';
 		font-size: 4rem;
 		transition: all 0.5s ease-in-out;
@@ -29,5 +28,5 @@ section#section-onground-container {
 
 .sec-ongrd-h2-offset, .sec-ongrd-p-offset {
 	opacity: 0;
-	transform: translateX(-100%);
+	transform: translateX(-30%);
 }
