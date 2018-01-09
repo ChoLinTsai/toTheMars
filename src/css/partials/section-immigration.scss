@@ -3,4 +3,51 @@ section#section-immigration-container {
 	@include bgimg('../img/section-immigration-bg.jpg',
 	no-repeat, center, bottom, cover, fixed);
 	overflow: hidden;
+	color: #fff;
+	@include gridTempColsRows(12);
+	h1#section-immi-h1 {
+		margin: 0;
+		padding: 0;
+		@include gridColRow(col-2,col-5,row-3,row-4);
+		@include gridItemPosition(start, center);
+		font-family: 'exo2-black';
+		font-size: 7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		transition: all 0.35s ease-in-out;
+	}
+	h2#section-immi-h2 {
+		margin: 0;
+		padding: 0;
+		@include gridColRow(col-2,col-5,row-4,row-5);
+		@include gridItemPosition(start, start);
+		font-family: 'exo2-black';
+		font-size: 6rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		transition: all 0.35s ease-in-out;
+	}
+	ul#section-immi-ul {
+		@include gridColRow(col-2,col-5,row-5,row-6);
+		@include gridItemPosition(start, start);
+		padding-left: 0;
+		font-size: 4rem;
+		list-style-type: none;
+		transition: all 0.35s ease-in-out;
+	}
+}
+
+.sec-immi-h1-offset {
+	opacity: 0;
+	transform: translateX(-50%);
+}
+
+.sec-immi-h2-offset {
+	opacity: 0;
+	transform: translateX(-50%);
+}
+
+.sec-immi-ul-offset {
+	opacity: 0;
+	transform: translateY(50%);
 }

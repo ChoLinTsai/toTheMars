@@ -3,4 +3,32 @@ section#section-dome-container {
 	@include bgimg('../img/section-dome-bg.jpg',
 	no-repeat, center, bottom, cover, fixed);
 	overflow: hidden;
+	@include gridTempColsRows(12);
+	color: #fff;
+	h1#section-dome-h1 {
+		@include wh(normal, 100%, 100%);
+		@include gridColRow(col-10,col-13,row-5,row-6);
+		margin: 0;
+		padding: 0;
+		@include gridItemPosition(start, center);
+		font-family: 'exo2-black';
+		font-size: 7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		transition: all 0.35s ease-in-out;
+	}
+	p#section-dome-p {
+		@include wh(normal, 100%, 100%);
+		@include gridColRow(col-10,col-13,row-6,row-12);
+		font-family: 'roboto-black';
+		padding: 2rem 2rem 0 0;
+		font-size: 3rem;
+		transition: all 0.45s ease-in-out;
+	}
+}
+
+
+.sec-dome-offset {
+	opacity: 0;
+	transform: translateX(50%);
 }
