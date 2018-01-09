@@ -1,0 +1,131 @@
+section#section-tothemars-container {
+	margin: 0 auto;
+	@include wh(normal, 70%, 3000px);
+	div#figure-1-wrapper {
+		@include wh(normal, 100%, 500px);
+		display: flex;
+		figure#figure-1 {
+			@include wh(normal, 100%, 100%);
+			@include bgimg(
+				'../img/section-tothemars-fig1-bg.jpg',
+				no-repeat,center,center,cover,scroll);
+			flex: 2;
+			order: 1;
+		}
+		div {
+			flex: 1;
+			order: 2;
+		}
+	}
+	div#figure-2-wrapper {
+		@include wh(normal, 100%, 500px);
+		display: flex;
+		figure#figure-2 {
+			@include wh(normal, 100%, 100%);
+			@include bgimg(
+				'../img/section-tothemars-fig2-bg.jpg',
+				no-repeat,center,center,cover,scroll);
+			flex: 2;
+			order: 2;
+		}
+		div {
+			flex: 1;
+			order: 1;
+		}
+	}
+	div#figure-3-wrapper {
+		@include wh(normal, 100%, 500px);
+		display: flex;
+		figure#figure-3 {
+			@include wh(normal, 100%, 100%);
+			@include bgimg(
+				'../img/section-tothemars-fig3-bg.jpg',
+				no-repeat,center,center,cover,scroll);
+			flex: 2;
+			order: 1;
+		}
+		div {
+			flex: 1;
+			order: 2;
+		}
+	}
+	div#figure-4-wrapper {
+		@include wh(normal, 100%, 500px);
+		display: flex;
+		figure#figure-4 {
+			@include wh(normal, 100%, 100%);
+			@include bgimg(
+				'../img/section-tothemars-fig4-bg.jpg',
+				no-repeat,center,center,cover);
+			flex: 2;
+			order: 2;
+		}
+		div {
+			flex: 1;
+			order: 1;
+		}
+	}
+	div#figure-5-wrapper {
+		@include wh(normal, 100%, 800px);
+		display: flex;
+		flex-direction: column;
+		figure#figure-5 {
+			@include wh(normal, 100%, 100%);
+			@include bgimg(
+				'../img/section-tothemars-fig5-bg.jpg',
+				no-repeat,center,center,cover);
+			flex: 2;
+			order: 1;
+		}
+		h2#figure-h2-5 {
+			margin: 0;
+			padding: 3rem 0;
+			flex: 1;
+			order: 2;
+			color: #fff;
+			font-family: 'exo2-black';
+			font-size: 12rem;
+			@include flex(center, center);
+			text-transform: uppercase;
+			letter-spacing: 3rem;
+		}
+	}
+}
+
+.fig-margin {
+	margin: 5rem 0;
+}
+
+.fig-offset-right {
+	opacity: 0;
+	transform: translateX(50%);
+}
+
+.fig-offset-left {
+	opacity: 0;
+	transform: translateX(-50%);
+}
+
+.fig-content {
+	@include flex(flex-start, flex-start);
+	flex-direction: column;
+	padding: 2rem;
+	transition: all 0.35s ease-in-out;
+	h1 {
+		margin: 0;
+		padding: 0;
+		color: #F6F6F6;
+		font-size: 7rem;
+		font-family: 'exo2-black';
+		letter-spacing: 0.5rem;
+	}
+	p {
+		margin: 0;
+		padding: 2rem 0 0 0;
+		font-family: 'roboto-medium';
+		font-size: 2.3rem;
+		line-height: 1.5;
+		color: #F6F6F6;
+		letter-spacing: 2px;
+	}
+}

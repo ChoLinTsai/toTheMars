@@ -20,12 +20,39 @@ function debounce(func, wait, immediate) {
 function $addClsls(element, ...newClass) {
 	return element.classList.add(...newClass);
 }
+
 function $rmClsls(element, ...rmClass) {
 	return element.classList.remove(...rmClass);
 }
+
 // set func for select elements
 function $select(element) {
 	return document.querySelector(element);
+}
+
+// function for section phase to reuse
+function sectionSwitch(selectEle, eleClass, indexNum) {
+	switch (indexNum) {
+		case 0:
+			$addClsls(selectEle, eleClass);
+			break;
+		case 1:
+			$rmClsls(selectEle, eleClass);
+			break;
+		default:
+	}
+}
+
+// function for controlling element movements
+function mapGroupItems (arrayItems, initTime, addTime, addIncrement, indexNum) {
+		arrayItems.map( items => {
+			setTimeout( () => {
+				let [ x ] = [items];
+				let [ i, j ] = x;
+				sectionSwitch(i, j, indexNum);
+			}, initTime + addTime);
+			addTime += addIncrement;
+		})
 }
 
 // most of evnets are written in this function
@@ -419,38 +446,195 @@ function checkScroll() {
   // get section phase 2 elements
 	let secPhase2H1Trigger = 7550;
 	let secPhase2PTrigger = 7700;
+	let secPhase2H1Remove = 8350;
+	let secPhase2PRemove = 8500;
 	let secPhase2H1 = $select('#section-phase2-h1');
 	let secPhase2P = $select('#section-phase2-p');
 	let secPhase2Offset = 'sec-phase2-offset';
-	// function for section phase to reuse
-	function sectionPhase(selectEle, eleClass, indexNum) {
-		switch (indexNum) {
-			case 0:
-				$addClsls(selectEle, eleClass);
-				break;
-			case 1:
-				$rmClsls(selectEle, eleClass);
-				break;
-			default:
-		}
-	}
+
   // check if true to show #section-phase2-h1
 	if (wScrollY > secPhase2H1Trigger) {
-		sectionPhase(secPhase2H1, secPhase2Offset, 1)
+		sectionSwitch(secPhase2H1, secPhase2Offset, 1)
 	} else if (wScrollY < secPhase2H1Trigger) {
-		sectionPhase(secPhase2H1, secPhase2Offset, 0)
+		sectionSwitch(secPhase2H1, secPhase2Offset, 0)
 	}
 	// check if true to show #section-phase2-p
 	if (wScrollY > secPhase2PTrigger) {
-		sectionPhase(secPhase2P, secPhase2Offset, 1)
+		sectionSwitch(secPhase2P, secPhase2Offset, 1)
 	} else if (wScrollY < secPhase2PTrigger) {
-		sectionPhase(secPhase2P, secPhase2Offset, 0)
+		sectionSwitch(secPhase2P, secPhase2Offset, 0)
+	}
+
+  // check if true to remove #section-phase-2-h1
+	if (wScrollY > secPhase2H1Remove) {
+		sectionSwitch(secPhase2H1, secPhase2Offset, 0);
+	}
+
+  // check if true to remove #section-phase2-p
+	if (wScrollY > secPhase2PRemove) {
+		sectionSwitch(secPhase2P, secPhase2Offset, 0)
+	}
+
+  /**
+   * section dome js
+  **/
+	let secDomeH1 = $select('#section-dome-h1');
+	let secDomeP = $select('#section-dome-p');
+	let secDomeOffset = 'sec-dome-offset';
+	let secDomeTriggerOn = 8500;
+	let secDomeTriggerOff = 9000;
+	let secDomeDelay = 200;
+
+  // check if true to show hide section dome elements
+	if (wScrollY > secDomeTriggerOn) {
+		sectionSwitch(secDomeH1, secDomeOffset, 1);
+		setTimeout( () => {
+			sectionSwitch(secDomeP, secDomeOffset, 1);
+		}, secDomeDelay)
+	} else if (wScrollY < secDomeTriggerOn) {
+		sectionSwitch(secDomeH1, secDomeOffset, 0);
+		setTimeout( () => {
+			sectionSwitch(secDomeP, secDomeOffset, 0);
+		}, secDomeDelay)
+	}
+
+	// check if true to hide section dome elements
+	if (wScrollY > secDomeTriggerOff) {
+		sectionSwitch(secDomeH1, secDomeOffset, 0);
+		setTimeout( () => {
+			sectionSwitch(secDomeP, secDomeOffset, 0);
+		}, secDomeDelay)
+	}
+
+	/**
+	 * section phase 3 js
+	**/
+  // get section phase 3 elements
+	let secPhase3H1 = $select('#section-phase3-h1');
+	let secPhase3P = $select('#section-phase3-p');
+	let secPhase3Offset = 'sec-phase3-offset';
+	let secPhase3H1Trigger = 9000;
+	let secPhase3PTrigger = 9150;
+	let secPhase3H1Remove = 9800;
+	let secPhase3PRemove = 9950;
+
+	if (wScrollY > secPhase3H1Trigger) {
+		sectionSwitch(secPhase3H1, secPhase3Offset, 1);
+	} else if (wScrollY < secPhase3H1Trigger) {
+		sectionSwitch(secPhase3H1, secPhase3Offset, 0);
+	}
+
+	if (wScrollY > secPhase3PTrigger) {
+		sectionSwitch(secPhase3P, secPhase3Offset, 1);
+	} else if (wScrollY < secPhase3PTrigger) {
+		sectionSwitch(secPhase3P, secPhase3Offset, 0);
+	}
+
+	if (wScrollY > secPhase3H1Remove) {
+		sectionSwitch(secPhase3H1, secPhase3Offset, 0);
+	}
+
+	if (wScrollY > secPhase3PRemove) {
+		sectionSwitch(secPhase3P, secPhase3Offset, 0);
+	}
+
+	/**
+	 * section immigration js
+	**/
+  // get section immigration elements and set values
+	let secImmi4H1 = $select('#section-immi-h1');
+	let secImmi4H2 = $select('#section-immi-h2');
+	let secImmi4Ul = $select('#section-immi-ul');
+	let secImmiH1Offset = 'sec-immi-h1-offset';
+	let secImmiH2Offset = 'sec-immi-h2-offset';
+	let secImmiUlOffset = 'sec-immi-ul-offset';
+	let secImmi4Trigger = 9950;
+	let addTime = 0;
+	let addTimeIncrement = 250
+	let groupItems = [
+		[secImmi4H1, secImmiH1Offset],
+		[secImmi4H2, secImmiH2Offset],
+		[secImmi4Ul, secImmiUlOffset]
+	]
+
+  // check if true to shoe or hide elements
+	if (wScrollY > secImmi4Trigger) {
+			mapGroupItems(groupItems, 0, 0, 250, 1);
+	} else if (wScrollY < secImmi4Trigger) {
+			mapGroupItems(groupItems, 0, 0, 250, 0);
+	}
+
+	/**
+	 * section phase 4 js
+	**/
+	let secPhase4H1 = $select('#section-phase4-h1');
+	let secPhase4P = $select('#section-phase4-p');
+	let secPhase4Offset = 'sec-phase4-offset';
+	let secPhase4H1trigger = 10500;
+	let secPhase4Ptrigger = 10650;
+	let secPhase4H1Remove = 11250;
+	let secPhase4PRemove = 11450;
+
+
+
+	if (wScrollY > secPhase4H1trigger ) {
+		sectionSwitch(secPhase4H1, secPhase4Offset, 1);
+	} else if (wScrollY < secPhase4H1trigger) {
+		sectionSwitch(secPhase4H1, secPhase4Offset, 0);
+	}
+
+	if (wScrollY > secPhase4Ptrigger ) {
+		sectionSwitch(secPhase4P, secPhase4Offset, 1);
+	} else if (wScrollY < secPhase4Ptrigger) {
+		sectionSwitch(secPhase4P, secPhase4Offset, 0);
+	}
+
+	if (wScrollY > secPhase4H1Remove) {
+		sectionSwitch(secPhase4H1, secPhase4Offset, 0);
+	}
+
+	if (wScrollY > secPhase4PRemove) {
+		sectionSwitch(secPhase4P, secPhase4Offset, 0);
+	}
+
+	/**
+	 * section figure js
+	**/
+  // get section figure elements
+	let secFigDiv1 = $select('#fig-div-1');
+	let secFigDiv2 = $select('#fig-div-2');
+	let secFigDiv3 = $select('#fig-div-3');
+	let secFigDiv4 = $select('#fig-div-4');
+	let secFigOffsetRight = 'fig-offset-right';
+	let secFigOffsetLeft = 'fig-offset-left';
+	let secFigDiv1Trigger = 11200;
+	let secFigDiv2Trigger = 11450;
+	let secFigDiv3Trigger = 12200;
+	let secFigDiv4Trigger = 12700;
+
+	if (wScrollY > secFigDiv1Trigger) {
+		sectionSwitch(secFigDiv1, secFigOffsetRight, 1);
+	}
+
+	if (wScrollY > secFigDiv2Trigger) {
+		sectionSwitch(secFigDiv2, secFigOffsetLeft, 1);
+	}
+
+	if (wScrollY > secFigDiv3Trigger) {
+		sectionSwitch(secFigDiv3, secFigOffsetRight, 1);
+	}
+
+	if (wScrollY > secFigDiv4Trigger) {
+		sectionSwitch(secFigDiv4, secFigOffsetLeft, 1);
 	}
 
 
 
 
-	// console.log(wScrollY);
+
+
+
+	console.log(wScrollY);
 
 }
 
