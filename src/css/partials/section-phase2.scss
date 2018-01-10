@@ -3,6 +3,7 @@ section#section-phase2-container {
 	background: #C06C84;
 	@include flex(center, center);
 	flex-direction: column;
+	overflow: hidden;
 	h1#section-phase2-h1 {
 		margin-bottom: 5rem;
 		color: #fff;

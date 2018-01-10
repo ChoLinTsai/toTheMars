@@ -2,15 +2,13 @@ main#main-container {
 	@include wh(normal, 100vw, 100vh);
 	@include bgimg('../img/main-bg.jpg',
 	no-repeat, center, center, cover, fixed);
+	overflow: hidden;
 	div#main-wrapper {
 		@include wh(normal, 100vw, 100vh);
 		@include gridTempColsRows(8);
-		position: fixed;
-		top: 0;
-		left: 0;
 		h1#main-h1 {
 			@include wh(normal, 100%, 100%);
-			@include gridColRow(col-2, col-8, row-5, row-6);
+			@include gridColRow(col-2, col-8, row-3, row-4);
 			margin: 0;
 			padding: 0;
 			color: white;
@@ -22,7 +20,7 @@ main#main-container {
 		}
 		p#main-p {
 			@include wh(normal, 100%, 100%);
-			@include gridColRow(col-3, col-7, row-6, row-7);
+			@include gridColRow(col-3, col-7, row-4, row-5);
 			color: white;
 			font-family: 'exo2-black';
 			font-size: 5rem;
@@ -34,23 +32,10 @@ main#main-container {
 
 .main-h1-offsetY {
 	opacity: 0;
-	transform: translateY(50%);
+	transform: translateX(-50%);
 }
 
-.main-h1-pushup {
-	letter-spacing: 0.75rem;
-	transform: translateY(-300%) scale(1.25);
-}
-
-.main-h1-hide {
-	opacity: 0;
-}
 .main-p-offsetY {
 	opacity: 0;
-	transform: translateY(50%);
-}
-
-.main-p-offsetY-up {
-	opacity: 0;
-	transform: translateY(-50%);
+	transform: translateX(-50%);
 }

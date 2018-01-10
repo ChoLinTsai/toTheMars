@@ -1,0 +1,6 @@
+/* media query for large laptop */
+@media screen and (max-width: 1440px) {
+	article#article-container {
+		@include wh(normal, 100vw, 350px);
+	}
+}

@@ -1,0 +1,53 @@
+/* media query for large laptop */
+@media screen and (max-width: 1440px) {
+	header#header-container {
+		@include gridTempColsRows(8);
+		h1#header-h1 {
+			font-size: 7rem;
+			letter-spacing: 1rem;
+			top: 100px;
+		}
+		p#header-p {
+			letter-spacing: 0.5rem;
+			font-size: 4.5rem;
+			top: 300px;
+		}
+	}
+}
+
+/* media query for normal laptop */
+@media screen and (max-width: 1024px) {
+	header#header-container {
+		h1#header-h1 {
+			@include gridColRow(col-2,col-6,row-2,row-3);
+			font-size: 5.5rem;
+			letter-spacing: 1rem;
+		}
+		p#header-p {
+			letter-spacing: 0.5rem;
+			font-size: 3.5rem;
+			top: 300px;
+		}
+	}
+}
+
+/* media query for tablet */
+@media screen and (max-width: 768px) {
+	header#header-container {
+		h1#header-h1 {
+			@include gridColRow(col-2,col-6,row-2,row-3);
+			font-size: 4.5rem;
+			letter-spacing: 0.25rem;
+		}
+		p#header-p {
+			@include gridColRow(col-2,col-6,row-3,row-5);
+			letter-spacing: 0.25rem;
+			font-size: 3rem;
+			line-height: 1.5;
+			top: 250px;
+		}
+		p.header-arrow {
+			font-size: 1.5rem;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+/* media query for large laptop */
+@media screen and (max-width: 1440px) {
+	section#section-begin-container {
+		div#section-begin-wrapper {
+			h1#section-begin-h1 {
+				font-size: 5rem;
+			}
+			p#section-begin-p{
+				font-size: 2.5rem;
+			}
+		}
+	}
+}

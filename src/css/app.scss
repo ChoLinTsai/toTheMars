@@ -4,18 +4,23 @@
 
 /* header style */
 @import "./partials/header.scss";
+@import "./partials/mediaquery/mq_header.scss";
 
 /* aside style */
 @import "./partials/aside.scss";
+@import "./partials/mediaquery/mq_aside.scss";
 
 /* main style */
 @import "./partials/main.scss";
+@import "./partials/mediaquery/mq_main.scss";
 
 /* article style */
 @import "./partials/article.scss";
+@import "./partials/mediaquery/mq_article.scss";
 
 /* section begin style */
 @import "./partials/section-begin.scss";
+@import "./partials/mediaquery/mq_begin.scss";
 
 /* section landing style */
 @import "./partials/section-landing.scss";
@@ -46,3 +51,6 @@
 @import "./partials/section-phase4.scss";
 /* section tothemars style*/
 @import "./partials/section-tothemars.scss";
+
+/* footer style */
+@import "./partials/footer.scss";
