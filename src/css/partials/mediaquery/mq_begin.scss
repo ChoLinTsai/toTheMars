@@ -11,3 +11,36 @@
 		}
 	}
 }
+
+/* media query for normal laptop */
+@media screen and (max-width: 1024px) {
+	section#section-begin-container {
+		div#section-begin-wrapper {
+			h1#section-begin-h1 {
+				font-size: 5rem;
+				letter-spacing: 10px;
+			}
+			p#section-begin-p {
+				font-size: 2rem;
+				letter-spacing: 2px;
+			}
+		}
+	}
+}
+
+/* media query for tablet */
+@media screen and (max-width: 768px) {
+	section#section-begin-container {
+		div#section-begin-wrapper {
+			h1#section-begin-h1 {
+				font-size: 4rem;
+				letter-spacing: 5px;
+			}
+			p#section-begin-p {
+				@include gridColRow(col-4, col-8, row-4, row-7);
+				font-size: 2rem;
+				letter-spacing: 2px;
+			}
+		}
+	}
+}

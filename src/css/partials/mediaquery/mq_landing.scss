@@ -1,0 +1,38 @@
+/* media query for large laptop */
+@media screen and (max-width: 1440px) {
+	section#section-landing-container {
+		@include wh(normal, 100vw, 350px);
+		h2#section-landing-h2{
+			padding: 0;
+		}
+		p#section-landing-p {
+			padding-top: 4rem;
+		}
+	}
+}
+
+/* media query for normal laptop */
+@media screen and (max-width: 1024px) {
+	section#section-landing-container {
+		@include wh(normal, 100vw, 300px);
+		h2#section-landing-h2{
+			font-size: 4rem;
+		}
+		p#section-landing-p {
+			font-size: 5rem;
+		}
+	}
+}
+
+/* media query for tablet */
+@media screen and (max-width: 768px) {
+	section#section-landing-container {
+		@include wh(normal, 100vw, 250px);
+		h2#section-landing-h2{
+			font-size: 3rem;
+		}
+		p#section-landing-p {
+			font-size: 4rem;
+		}
+	}
+}

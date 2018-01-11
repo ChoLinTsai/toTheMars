@@ -1,3 +1,4 @@
+/* media query for large laptop */
 @media screen and (max-width: 1440px) {
 	main#main-container {
 		div#main-wrapper {
@@ -11,7 +12,7 @@
 	}
 }
 
-
+/* media query for normal laptop */
 @media screen and (max-width: 1024px) {
 	main#main-container {
 		div#main-wrapper {
@@ -25,6 +26,7 @@
 	}
 }
 
+/* media query for tablet */
 @media screen and (max-width: 768px) {
 	main#main-container {
 		div#main-wrapper {
@@ -32,7 +34,7 @@
 				font-size: 4rem;
 			}
 			p#main-p {
-				font-size: 3rem;
+				font-size: 2.5rem;
 			}
 		}
 	}

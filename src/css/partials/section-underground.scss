@@ -15,7 +15,7 @@ section#section-underground-container {
 		font-size: 7rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5rem;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 	h2#section-underground-h2 {
 		margin: 0;
@@ -26,7 +26,7 @@ section#section-underground-container {
 		font-size: 6rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5rem;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 	ul#section-underground-ul {
 		@include gridColRow(col-9,col-12,row-5,row-6);
@@ -34,22 +34,12 @@ section#section-underground-container {
 		padding-left: 0;
 		font-size: 4rem;
 		list-style-type: none;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 }
 
 
-.sec-under-h1-offset {
+.sec-under-offset {
 	opacity: 0;
 	transform: translateX(50%);
-}
-
-.sec-under-h2-offset {
-	opacity: 0;
-	transform: translateX(50%);
-}
-
-.sec-under-ul-offset {
-	opacity: 0;
-	transform: translateY(50%);
 }

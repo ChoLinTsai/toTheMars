@@ -14,7 +14,7 @@ section#section-colony-container {
 		font-size: 7rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5rem;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 	h2#section-colony-h2 {
 		margin: 0;
@@ -25,7 +25,7 @@ section#section-colony-container {
 		font-size: 6rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5rem;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 	ul#section-colony-ul {
 		@include gridColRow(col-2,col-4,row-4,row-6);
@@ -34,7 +34,7 @@ section#section-colony-container {
 		padding-left: 0;
 		font-size: 4rem;
 		list-style-type: none;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 }
 
