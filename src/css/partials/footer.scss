@@ -1,0 +1,58 @@
+footer#footer-container {
+	@include wh(normal, 100vw, 400px);
+	background-color: #071C21;
+	div#footer-wrapper {
+		margin: 0 auto;
+		@include wh(normal, 70%, 100%);
+		display: flex;
+		figure#footer-fig {
+			@include wh(normal, 100%, 100%);
+			@include bgimg('../img/footer-vr-bg.jpg',
+			no-repeat,left,center,cover,scroll);
+			flex: 3;
+		}
+		div#footer-content {
+			flex: 2;
+			@include flex(center, center);
+			flex-direction: column;
+			h1 {
+				margin: 0;
+				padding: 0;
+				color: #fff;
+				font-size: 4rem;
+				font-family: 'roboto-black';
+			}
+			input {
+				margin-top: 10rem;
+				margin-bottom: 2rem;
+				@include wh(normal, 450px, 50px);
+				text-align: center;
+				transition: all 0.25s ease-in-out;
+				&::placeholder {
+					font-size: 2rem;
+					letter-spacing: 5px;
+				}
+				&:hover {
+					transform: scale(1.05);
+					font-size: 2.05rem;
+				}
+			}
+			a {
+				margin-bottom: 2rem;
+				padding: 10px 0;
+				@include wh(normal, 450px, 50px);
+				font-size: 2rem;
+				letter-spacing: 2px;
+				text-align: center;
+				background-color: #35B0AB;
+				color: #fff;
+				text-decoration: none;
+				transition: all 0.25s ease-in-out;
+				&:hover {
+					transform: scale(1.05);
+					font-size: 2.05rem;
+				}
+			}
+		}
+	}
+}

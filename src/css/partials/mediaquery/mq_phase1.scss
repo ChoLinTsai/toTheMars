@@ -1,0 +1,32 @@
+/* media query for large laptop */
+@media screen and (max-width: 1440px) {
+	section#section-phase1-container {
+		@include wh(normal, 100vw, 350px);
+	}
+}
+
+/* media query for normal laptop */
+@media screen and (max-width: 1024px) {
+	section#section-phase1-container {
+		@include wh(normal, 100vw, 300px);
+		h2#section-phase1-h2 {
+			font-size: 9rem;
+		}
+		p#section-phase1-p {
+			font-size: 7rem;
+		}
+	}
+}
+
+/* media query for tablet */
+@media screen and (max-width: 768px) {
+	section#section-phase1-container {
+		@include wh(normal, 100vw, 250px);
+		h2#section-phase1-h2 {
+			font-size: 6rem;
+		}
+		p#section-phase1-p {
+			font-size: 5rem;
+		}
+	}
+}

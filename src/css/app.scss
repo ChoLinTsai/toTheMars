@@ -4,33 +4,44 @@
 
 /* header style */
 @import "./partials/header.scss";
+@import "./partials/mediaquery/mq_header.scss";
 
 /* aside style */
 @import "./partials/aside.scss";
+@import "./partials/mediaquery/mq_aside.scss";
 
 /* main style */
 @import "./partials/main.scss";
+@import "./partials/mediaquery/mq_main.scss";
 
 /* article style */
 @import "./partials/article.scss";
+@import "./partials/mediaquery/mq_article.scss";
 
 /* section begin style */
 @import "./partials/section-begin.scss";
+@import "./partials/mediaquery/mq_begin.scss";
 
 /* section landing style */
 @import "./partials/section-landing.scss";
+@import "./partials/mediaquery/mq_landing.scss";
 /* section onground style */
 @import "./partials/section-onground.scss";
+@import "./partials/mediaquery/mq_onground.scss";
 
 /* section phase 1 style */
 @import "./partials/section-phase1.scss";
+@import "./partials/mediaquery/mq_phase1.scss";
 /* section colony style */
 @import "./partials/section-colony.scss";
+@import "./partials/mediaquery/mq_colony.scss";
 
 /* section phase 1.5 style */
 @import "./partials/section-phase1-5.scss";
+@import "./partials/mediaquery/mq_phase1-5.scss";
 /* section underground style */
 @import "./partials/section-underground.scss";
+@import "./partials/mediaquery/mq_underground.scss";
 
 /* section phase 2 style */
 @import "./partials/section-phase2.scss";
@@ -46,3 +57,23 @@
 @import "./partials/section-phase4.scss";
 /* section tothemars style*/
 @import "./partials/section-tothemars.scss";
+
+/* footer style */
+@import "./partials/footer.scss";
+
+
+
+/* media query for large laptop */
+@media screen and (max-width: 1440px) {
+
+}
+
+/* media query for normal laptop */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* media query for tablet */
+@media screen and (max-width: 768px) {
+
+}

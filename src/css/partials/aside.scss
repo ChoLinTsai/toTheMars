@@ -1,9 +1,10 @@
 aside#aside-container {
-	@include wh(normal, 100vw, 500px);
+	@include wh(normal, 100vw, 400px);
 	background: #FF895D;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 	div#aside-panel {
 		padding: 1rem;
 		@include wh(normal, 1200px, 300px);

@@ -1,6 +1,6 @@
 section#section-tothemars-container {
 	margin: 0 auto;
-	@include wh(normal, 70%, 3000px);
+	@include wh(normal, 70%, 100%);
 	div#figure-1-wrapper {
 		@include wh(normal, 100%, 500px);
 		display: flex;
@@ -66,28 +66,24 @@ section#section-tothemars-container {
 		}
 	}
 	div#figure-5-wrapper {
-		@include wh(normal, 100%, 800px);
-		display: flex;
-		flex-direction: column;
+		@include wh(normal, 100%, 500px);
+		margin-bottom: 5rem;
 		figure#figure-5 {
 			@include wh(normal, 100%, 100%);
 			@include bgimg(
 				'../img/section-tothemars-fig5-bg.jpg',
 				no-repeat,center,center,cover);
-			flex: 2;
-			order: 1;
-		}
-		h2#figure-h2-5 {
-			margin: 0;
-			padding: 3rem 0;
-			flex: 1;
-			order: 2;
-			color: #fff;
-			font-family: 'exo2-black';
-			font-size: 12rem;
-			@include flex(center, center);
-			text-transform: uppercase;
-			letter-spacing: 3rem;
+			@include flex(center, flex-end);
+			h2#figure-h2-5 {
+				margin: 0;
+				padding: 3rem 0;
+				color: #fff;
+				font-family: 'exo2-black';
+				font-size: 12rem;
+				@include flex(center, center);
+				text-transform: uppercase;
+				letter-spacing: 3rem;
+			}
 		}
 	}
 }

@@ -1,9 +1,10 @@
-section#section-phase1-5-container{
+section#section-phase1-5-container {
 	@include wh(normal, 100vw, 500px);
 	background: #333;
 	@include flex(center, center);
 	flex-direction: column;
 	color: #F6C667;
+	overflow: hidden;
 	div {
 		display: flex;
 		h2#section-phase1-5-h2 {
@@ -12,21 +13,21 @@ section#section-phase1-5-container{
 			font-size: 10rem;
 			text-transform: uppercase;
 			letter-spacing: 0.5rem;
-			transition: all 0.35s ease-in-out;
+			transition: all 0.2s ease-in-out;
 		}
 		h3#pt5 {
 			font-family: 'exo2-black';
 			font-size: 10rem;
 			text-transform: uppercase;
 			letter-spacing: 0.5rem;
-			transition: all 0.35s ease-in-out;
+			transition: all 0.2s ease-in-out;
 		}
 	}
 	p#section-phase1-5-p {
 		font-family: 'roboto-black';
 		font-size: 8rem;
 		letter-spacing: 0.5rem;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.2s ease-in-out;
 	}
 }
 
