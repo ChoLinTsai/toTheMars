@@ -20,7 +20,6 @@ function debounce(func, wait, immediate) {
 function $addClsls(element, ...newClass) {
 	return element.classList.add(...newClass);
 }
-
 function $rmClsls(element, ...rmClass) {
 	return element.classList.remove(...rmClass);
 }
@@ -28,16 +27,6 @@ function $rmClsls(element, ...rmClass) {
 // set func for select elements
 function $select(element) {
 	return document.querySelector(element);
-}
-
-// console.log
-function $log(x){
-	return console.log(x);
-}
-
-// get element offsetTop
-function OffsetTop(x) {
-	return $log(x.offsetTop);
 }
 
 // function for section phase to reuse
@@ -67,7 +56,6 @@ function mapGroupItems (arrayItems, initTime, addTime, addIncrement, indexNum) {
 
 // most of evnets are written in this function
 function checkScroll() {
-
 	// get element move up percentage to trigger event
 	function calTriggerPt(ele, percent) {
 		let eleOffsetTop = ele.offsetTop;
@@ -75,7 +63,6 @@ function checkScroll() {
     // return boolean;
 		return calTriggerPoint;
 	}
-
 	/**
 	*  Header section javascript
 	**/
@@ -94,7 +81,6 @@ function checkScroll() {
 	let arrowFadeOut = 'header-arrow-fade-out'
 	let arrowAnimation = 'arrow-animation';
 	let headerEleTrigger = 	wScrollY > (headerArrow.offsetTop * 0.1);
-
 
 	// check if true to add|remove .h1SlideRight .pSlideRight
 	if(headerEleTrigger) {
@@ -167,7 +153,7 @@ function checkScroll() {
 	let secBeginP = $select('#section-begin-p');
 	let secBeginShow = calTriggerPt(articleContainer, 1.35);
 	let secsecBeginHide = calTriggerPt(articleContainer, 1.65);
-
+  // check if true to show/hide section begin elements
 	if (secBeginShow) {
 		$rmClsls(secBeginH1, 'sec-begin-h1-offset');
 		$rmClsls(secBeginP, 'sec-begin-p-offset');
@@ -184,7 +170,7 @@ function checkScroll() {
 	let secLandingP = $select('#section-landing-p ');
 	let secLandingContainer = $select('#section-landing-container');
 	let secLnadingTrigger = calTriggerPt(secLandingContainer, 1.065)
-
+  // check if true to show/hide landing elements
 	if (secLnadingTrigger) {
 		$rmClsls(secLandingH2, 'sec-landing-offset');
 		$rmClsls(secLandingP, 'sec-landing-offset');
@@ -201,7 +187,7 @@ function checkScroll() {
 	let secOnGrdP = $select('#section-onground-p');
 	let secOnGroundShow = calTriggerPt(secLandingContainer, 1.25);
 	let secOnGroundHide = calTriggerPt(secLandingContainer, 1.415);
-
+  // check if true to show/hide onground elements
 	if (secOnGroundShow) {
 		$rmClsls(secOnGrdH2, 'sec-ongrd-h2-offset');
 		$rmClsls(secOnGrdP, 'sec-ongrd-p-offset');
@@ -249,7 +235,7 @@ function checkScroll() {
 		[secColonyH2, secColonyHOffset],
 		[secColonyUl, secColonyUlOffset]
 	];
-
+  // check if true to show/hide colony elements
 	if (secColonyShow) {
 		mapGroupItems(groupColonyItems, 0, 0, 200, 1);
 	} else {
@@ -294,6 +280,7 @@ function checkScroll() {
 		[secUnderH2, secUnderOffset],
 		[secUnderUl, secUnderOffset]
 	]
+  // if true to show/hide underground elements
 	if (secUnderShow) {
 		mapGroupItems(groupUnderItems, 0, 0, 200, 1);
 	} else {
@@ -313,7 +300,7 @@ function checkScroll() {
 		[secPhase2H1, secPhase2Offset],
 		[secPhase2P, secPhase2Offset]
 	]
-
+  // if true to show/hide phase 2 elements
 	if (secPhase2Show) {
 		mapGroupItems(groupPhase2Items, 0, 0, 250, 1);
 	} else {
@@ -379,7 +366,7 @@ function checkScroll() {
 		[secImmi4Ul, secImmiUlOffset]
 	]
 
-  // check if true to shoe or hide elements
+  // check if true to shoe or hide immigration elements
 	if (secImmi4Trigger) {
 			mapGroupItems(groupItems, 0, 0, 250, 1);
 	} else {
@@ -398,7 +385,7 @@ function checkScroll() {
 		[secPhase4H1, secPhase4Offset],
 		[secPhase4P, secPhase4Offset]
 	]
-
+	// if true to show/hide phase 4 elements
 	if (secPhase4Show) {
 		mapGroupItems(groupPhase4Items, 0, 0, 250, 1);
 	} else {
@@ -409,44 +396,33 @@ function checkScroll() {
 	 * section figure js
 	**/
   // get section figure elements
+	let secFig1 = $select('#figure-1');
+	let secFig2 = $select('#figure-2');
+	let secFig3 = $select('#figure-3');
+	let secFig4 = $select('#figure-4');
 	let secFigDiv1 = $select('#fig-div-1');
 	let secFigDiv2 = $select('#fig-div-2');
 	let secFigDiv3 = $select('#fig-div-3');
 	let secFigDiv4 = $select('#fig-div-4');
-
-	let secFig1 = $select('#figure-1');
-
 	let secFigOffsetRight = 'fig-offset-right';
 	let secFigOffsetLeft = 'fig-offset-left';
 
-	// let fig1halfPoint = secFig1.offsetTop - secFig1.offsetHeight / 2;
-	// let fig2halfPoint = $select('#fig-div-2').offsetTop;
-	// let trigerpt = wScrollY + secFig1.offsetHeight
-	// if (trigerpt > fig1halfPoint) {
-	// 	$rmClsls(secFigDiv1, secFigOffsetRight);
-	// }
-  //
-	// $log(`Half pt : ${fig1halfPoint}`);
-	// $log(`fig 1 offset top : ${secFig1.offsetTop}`);
-
-	if (calTriggerPt(secPhase4Container, 1.07)) {
+	// if true to show/hide to the mars elements
+	if (calTriggerPt(secFig1, 1.015)) {
 		$rmClsls(secFigDiv1, secFigOffsetRight);
 	}
 
-	if (calTriggerPt(secPhase4Container, 1.125)) {
+	if (calTriggerPt(secFig2, 1.015)) {
 		$rmClsls(secFigDiv2, secFigOffsetLeft);
 	}
 
-	if (calTriggerPt(secPhase4Container, 1.18)) {
+	if (calTriggerPt(secFig3, 1.015)) {
 		$rmClsls(secFigDiv3, secFigOffsetRight);
 	}
 
-	if (calTriggerPt(secPhase4Container, 1.22)) {
+	if (calTriggerPt(secFig4, 1.015)) {
 		$rmClsls(secFigDiv4, secFigOffsetLeft);
 	}
-
-	// console.log(wScrollY);
-
 }
 
 // listen window scroll event

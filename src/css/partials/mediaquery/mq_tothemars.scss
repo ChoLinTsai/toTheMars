@@ -1,0 +1,118 @@
+/* media query for large laptop */
+@media screen and (max-width: 1440px) {
+	section#section-tothemars-container {
+		div#figure-1-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-2-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-3-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-4-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-5-wrapper {
+			@include wh(normal, 100%, 450px);
+			figure#figure-5 {
+				h2#figure-h2-5 {
+					font-size: 10rem;
+				}
+			}
+		}
+	}
+	.fig-content {
+		h1 {
+			font-size: 4.5rem;
+			letter-spacing: 0.5rem;
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
+}
+
+/* media query for normal laptop */
+@media screen and (max-width: 1024px) {
+	section#section-tothemars-container {
+		@include wh(normal, 100%, 100%);
+		div#figure-1-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-2-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-3-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-4-wrapper {
+			@include wh(normal, 100%, 400px);
+		}
+		div#figure-5-wrapper {
+			margin: 0;
+			@include wh(normal, 100%, 450px);
+			figure#figure-5 {
+				h2#figure-h2-5 {
+					font-size: 9rem;
+				}
+			}
+		}
+	}
+
+	.fig-margin {
+		margin: 0;
+	}
+
+	.fig-content {
+		h1 {
+			font-size: 5rem;
+			letter-spacing: 0.5rem;
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
+}
+
+/* media query for tablet */
+@media screen and (max-width: 768px) {
+	section#section-tothemars-container {
+		@include wh(normal, 100%, 100%);
+		div#figure-1-wrapper {
+			@include wh(normal, 100%, 300px);
+		}
+		div#figure-2-wrapper {
+			@include wh(normal, 100%, 300px);
+		}
+		div#figure-3-wrapper {
+			@include wh(normal, 100%, 300px);
+		}
+		div#figure-4-wrapper {
+			@include wh(normal, 100%, 300px);
+		}
+		div#figure-5-wrapper {
+			margin: 0;
+			@include wh(normal, 100%, 400px);
+			figure#figure-5 {
+				h2#figure-h2-5 {
+					font-size: 8rem;
+				}
+			}
+		}
+	}
+
+	.fig-margin {
+		margin: 0;
+	}
+
+	.fig-content {
+		h1 {
+			font-size: 3rem;
+			letter-spacing: 0.5rem;
+		}
+		p {
+			font-size: 1.5rem;
+		}
+	}
+}

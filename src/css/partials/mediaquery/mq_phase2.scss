@@ -1,11 +1,11 @@
 /* media query for large laptop */
 @media screen and (max-width: 1440px) {
-	section#section-phase1-container {
+	section#section-phase2-container {
 		@include wh(normal, 100vw, 350px);
-		h2#section-phase1-h2 {
+		h1#section-phase2-h1 {
 			font-size: 9rem;
 		}
-		p#section-phase1-p {
+		p#section-phase2-p {
 			font-size: 7rem;
 		}
 	}
@@ -13,12 +13,12 @@
 
 /* media query for normal laptop */
 @media screen and (max-width: 1024px) {
-	section#section-phase1-container {
+	section#section-phase2-container {
 		@include wh(normal, 100vw, 300px);
-		h2#section-phase1-h2 {
+		h1#section-phase2-h1 {
 			font-size: 8rem;
 		}
-		p#section-phase1-p {
+		p#section-phase2-p {
 			font-size: 6rem;
 		}
 	}
@@ -26,12 +26,12 @@
 
 /* media query for tablet */
 @media screen and (max-width: 768px) {
-	section#section-phase1-container {
+	section#section-phase2-container {
 		@include wh(normal, 100vw, 250px);
-		h2#section-phase1-h2 {
+		h1#section-phase2-h1 {
 			font-size: 7rem;
 		}
-		p#section-phase1-p {
+		p#section-phase2-p {
 			font-size: 5rem;
 		}
 	}

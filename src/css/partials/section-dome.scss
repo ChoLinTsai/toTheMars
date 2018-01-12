@@ -15,7 +15,7 @@ section#section-dome-container {
 		font-size: 7rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5rem;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 	p#section-dome-p {
 		@include wh(normal, 100%, 100%);
@@ -23,7 +23,7 @@ section#section-dome-container {
 		font-family: 'roboto-black';
 		padding: 2rem 2rem 0 0;
 		font-size: 3rem;
-		transition: all 0.45s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 }
 
