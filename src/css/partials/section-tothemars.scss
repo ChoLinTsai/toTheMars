@@ -1,5 +1,6 @@
 section#section-tothemars-container {
 	margin: 0 auto;
+	overflow: hidden;
 	@include wh(normal, 70%, 100%);
 	div#figure-1-wrapper {
 		@include wh(normal, 100%, 500px);

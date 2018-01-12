@@ -45,22 +45,29 @@
 
 /* section phase 2 style */
 @import "./partials/section-phase2.scss";
+@import "./partials/mediaquery/mq_phase2.scss";
 /* section dome style */
 @import "./partials/section-dome.scss";
+@import "./partials/mediaquery/mq_dome.scss";
 
 /* section phase 3 style */
 @import "./partials/section-phase3.scss";
+@import "./partials/mediaquery/mq_phase3.scss";
 /* section dome style */
 @import "./partials/section-immigration.scss";
+@import "./partials/mediaquery/mq_immigration.scss";
+
 
 /* section phase 4 style */
 @import "./partials/section-phase4.scss";
+@import "./partials/mediaquery/mq_phase4.scss";
 /* section tothemars style*/
 @import "./partials/section-tothemars.scss";
+@import "./partials/mediaquery/mq_tothemars.scss";
 
 /* footer style */
 @import "./partials/footer.scss";
-
+@import "./partials/mediaquery/mq_footer.scss";
 
 
 /* media query for large laptop */
