@@ -7,14 +7,15 @@ header#header-container {
 	h1#header-h1 {
 		@include wh(normal, 100%, 100%);
 		@include gridColRow(col-2,col-6,row-2,row-3);
-		position: sticky;
-		letter-spacing: 2rem;
+		position: fixed;
 		top: 120px;
+		left: 300px;
 		margin: 0;
 		padding: 0;
 		color: white;
 		font-family: 'exo2-black';
 		font-size: 10rem;
+		letter-spacing: 2rem;
 		text-transform: uppercase;
 		transition: all 0.35s ease-in-out;
 		span {
@@ -23,10 +24,12 @@ header#header-container {
 	}
 	p#header-p {
 		letter-spacing: 1rem;
+		line-height: 1.5;
 		margin: 0;
 		padding: 1rem;
-		position: sticky;
-		top: 359px;
+		position: fixed;
+		top: 370px;
+		left: 400px;
 		color: white;
 		font-family: 'exo2-blackitalic';
 		font-size: 5.5rem;
@@ -50,7 +53,7 @@ header#header-container {
 
 .header-h1-slide-right {
 	opacity: 0;
-	transform: translateX(55%);
+	transform: translateX(25%);
 }
 
 .header-p-slide-right {
