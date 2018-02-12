@@ -5,7 +5,6 @@ header#header-container {
 	@include gridTempColsRows(8);
 	position: relative;
 	h1#header-h1 {
-		@include wh(normal, 100%, 100%);
 		@include gridColRow(col-2,col-6,row-2,row-3);
 		position: fixed;
 		top: 120px;
@@ -17,7 +16,7 @@ header#header-container {
 		font-size: 10rem;
 		letter-spacing: 2rem;
 		text-transform: uppercase;
-		transition: all 0.35s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		span {
 			color: #EE2B47;
 		}
@@ -34,7 +33,7 @@ header#header-container {
 		font-family: 'exo2-blackitalic';
 		font-size: 5.5rem;
 		@include gridColRow(col-3,col-6,row-4,row-6);
-		transition: all 0.2s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 	p.header-arrow {
 		position: absolute;
