@@ -66,10 +66,8 @@ function checkScroll() {
     // return boolean;
     return calTriggerPoint;
   }
-  /**
-	*  Header section javascript
-	**/
 
+  // Header section javascript
   // get window scrollY value
   const wScrollY = window.scrollY;
   // get #header h1 and .header-h1-slide-right
@@ -99,9 +97,7 @@ function checkScroll() {
     $addClsls(headerArrow, arrowAnimation);
   }
 
-  /**
-	* Aside section javascript
-	**/
+  // Aside section javascript
   // get aside elements
   let asideContainer = $select('#aside-container');
   let asideSection2 = $select('#aside-section-2');
@@ -117,9 +113,7 @@ function checkScroll() {
     }, asideDelay)
   }
 
-  /**
-	*  main section javascript
-	**/
+  // main section javascript
   // set trigger point and get #main-p
   let mainP = $select('#main-p');
   let mainH1 = $select('#main-h1');
@@ -135,9 +129,7 @@ function checkScroll() {
     $addClsls(mainH1, 'main-h1-offsetY');
   }
 
-  /**
-	 * article section js
-	**/
+  // article section js
   // set trigger point and get #article-h2
   let articleH2 = $select('#article-h2');
   let articleTriggerPt = calTriggerPt(articleContainer, 1.125);
@@ -149,9 +141,7 @@ function checkScroll() {
     $rmClsls(articleH2, 'article-h2-scale', 'h2-transform');
   }
 
-  /**
-	 * section begin js
-	**/
+  // section begin js
   // get section begin wrapper and h1
   let secBeginH1 = $select('#section-begin-h1');
   let secBeginP = $select('#section-begin-p');
@@ -166,9 +156,7 @@ function checkScroll() {
     $addClsls(secBeginP, 'sec-begin-p-offset');
   }
 
-  /**
-	 * section landing js
-	**/
+  // section landing js
   // get section ladning h1
   let secLandingH2 = $select('#section-landing-h2');
   let secLandingP = $select('#section-landing-p ');
@@ -183,9 +171,7 @@ function checkScroll() {
     $addClsls(secLandingP, 'sec-landing-offset');
   }
 
-  /**
-	 * section onground js
-	**/
+  // section onground js
   // get section onground h2 and p
   let secOnGrdH2 = $select('#section-onground-h2');
   let secOnGrdP = $select('#section-onground-p');
@@ -200,9 +186,7 @@ function checkScroll() {
     $addClsls(secOnGrdP, 'sec-ongrd-p-offset');
   }
 
-  /**
-   * section phase 1 js
-  **/
+  // section phase 1 js
   // get section phase 1 elements
   let secPhase1H2 = $select('#section-phase1-h2');
   let secPhase1P = $select('#section-phase1-p');
@@ -224,9 +208,7 @@ function checkScroll() {
     $addClsls(secPhase1P, 'sec-phase1-p-offset');
   }
 
-  /**
-	 * section colonise js
-	**/
+  // section colonise js
   // get section colony elements
   let secColonyH1 = $select('#section-colony-h1');
   let secColonyH2 = $select('#section-colony-h2');
@@ -252,9 +234,7 @@ function checkScroll() {
     mapGroupItems(groupColonyItems, 0, 0, 200, 0);
   }
 
-  /**
-	 * section phase 1.5 js
-	**/
+  // section phase 1.5 js
   // get section phase 1.5 h2 p offset and groupItems
   let secPt5Container = $select('#section-phase1-5-container');
   let secPhasePt5H2 = $select('#section-phase1-5-h2');
@@ -282,9 +262,7 @@ function checkScroll() {
     mapGroupItems(groupPt5Items, 0, 0, 250, 0);
   }
 
-  /**
-   * section city underground js
-  **/
+  // section city underground js
   // get city underground elements
   let secUnderH1 = $select('#section-underground-h1');
   let secUnderH2 = $select('#section-underground-h2');
@@ -309,9 +287,7 @@ function checkScroll() {
     mapGroupItems(groupUnderItems, 0, 0, 200, 0);
   }
 
-  /**
-	 * section phase 2 js
-	**/
+  // section phase 2 js
   // get section phase 2 elements
   let secPhase2H1 = $select('#section-phase2-h1');
   let secPhase2P = $select('#section-phase2-p');
@@ -333,9 +309,7 @@ function checkScroll() {
     mapGroupItems(groupPhase2Items, 0, 0, 250, 0);
   }
 
-  /**
-   * section dome js
-  **/
+  // section dome js
   // get dome elements
   let secDomeH1 = $select('#section-dome-h1');
   let secDomeP = $select('#section-dome-p');
@@ -357,9 +331,7 @@ function checkScroll() {
     mapGroupItems(groupDomeItems, 0, 0, 250, 0);
   }
 
-  /**
-	 * section phase 3 js
-	**/
+  // section phase 3 js
   // get section phase 3 elements
   let secPhase3H1 = $select('#section-phase3-h1');
   let secPhase3P = $select('#section-phase3-p');
@@ -382,9 +354,7 @@ function checkScroll() {
     mapGroupItems(groupPhase3Items, 0, 0, 250, 0);
   }
 
-  /**
-	 * section immigration js
-	**/
+  // section immigration js
   // get section immigration elements and set values
   let secImmi4H1 = $select('#section-immi-h1');
   let secImmi4H2 = $select('#section-immi-h2');
@@ -412,9 +382,7 @@ function checkScroll() {
     mapGroupItems(groupItems, 0, 0, 250, 0);
   }
 
-  /**
-	 * section phase 4 js
-	**/
+  // section phase 4 js
   let secPhase4H1 = $select('#section-phase4-h1');
   let secPhase4P = $select('#section-phase4-p');
   let secPhase4Offset = 'sec-phase4-offset';
@@ -435,9 +403,7 @@ function checkScroll() {
     mapGroupItems(groupPhase4Items, 0, 0, 250, 0);
   }
 
-  /**
-	 * section figure js
-	**/
+  // section figure js
   // get section figure elements
   let secFig1 = $select('#figure-1');
   let secFig2 = $select('#figure-2');
