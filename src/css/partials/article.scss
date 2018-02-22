@@ -3,6 +3,7 @@ article#article-container {
 	@include flex(center, center);
 	background: #35B0AB;
 	overflow: hidden;
+
 	h2#article-h2 {
 		color: #fff;
 		font-family: 'exo2-black';

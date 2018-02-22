@@ -6,17 +6,18 @@
 			font-size: 6rem;
 			letter-spacing: 0.5rem;
 		}
+
 		h2#section-underground-h2 {
 			@include gridColRow(col-9,col-13,row-4,row-5);
 			font-size: 5rem;
 			letter-spacing: 0.5rem;
 		}
+
 		ul#section-underground-ul {
 			font-size: 4rem;
 		}
 	}
 }
-
 /* media query for normal laptop */
 @media screen and (max-width: 1024px) {
 	section#section-underground-container {
@@ -25,18 +26,19 @@
 			font-size: 5rem;
 			letter-spacing: 0.2rem;
 		}
+
 		h2#section-underground-h2 {
 			@include gridColRow(col-9,col-13,row-5,row-6);
 			font-size: 4rem;
 			letter-spacing: 0.2rem;
 		}
+
 		ul#section-underground-ul {
 			@include gridColRow(col-9,col-13,row-6,row-8);
 			font-size: 3rem;
 		}
 	}
 }
-
 /* media query for tablet */
 @media screen and (max-width: 768px) {
 	section#section-underground-container {
@@ -44,10 +46,12 @@
 			@include gridColRow(col-9,col-13,row-4,row-5);
 			font-size: 4rem;
 		}
+
 		h2#section-underground-h2 {
 			@include gridColRow(col-9,col-13,row-5,row-6);
 			font-size: 3rem;
 		}
+
 		ul#section-underground-ul {
 			@include gridColRow(col-9,col-13,row-6,row-8);
 			font-size: 2.5rem;

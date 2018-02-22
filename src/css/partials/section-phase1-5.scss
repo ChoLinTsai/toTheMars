@@ -5,8 +5,10 @@ section#section-phase1-5-container {
 	flex-direction: column;
 	color: #F6C667;
 	overflow: hidden;
+
 	div {
 		display: flex;
+
 		h2#section-phase1-5-h2 {
 			margin-bottom: 5rem;
 			font-family: 'exo2-black';
@@ -15,6 +17,7 @@ section#section-phase1-5-container {
 			letter-spacing: 0.5rem;
 			transition: all 0.2s ease-in-out;
 		}
+
 		h3#pt5 {
 			font-family: 'exo2-black';
 			font-size: 10rem;
@@ -23,6 +26,7 @@ section#section-phase1-5-container {
 			transition: all 0.2s ease-in-out;
 		}
 	}
+
 	p#section-phase1-5-p {
 		font-family: 'roboto-black';
 		font-size: 8rem;

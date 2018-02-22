@@ -5,12 +5,12 @@
 			font-size: 4rem;
 			letter-spacing: 0.25rem;
 		}
+
 		p#section-onground-p {
 			font-size: 3.5rem;
 		}
 	}
 }
-
 /* media query for normal laptop */
 @media screen and (max-width: 1024px) {
 	section#section-onground-container {
@@ -19,13 +19,13 @@
 			font-size: 3.5rem;
 			letter-spacing: 0.1rem;
 		}
+
 		p#section-onground-p {
 			@include gridColRow(col-2,col-6,row-4,row-7);
 			font-size: 3rem;
 		}
 	}
 }
-
 /* media query for tablet */
 @media screen and (max-width: 768px) {
 	section#section-onground-container {
@@ -34,6 +34,7 @@
 			font-size: 3rem;
 			letter-spacing: 0.1rem;
 		}
+
 		p#section-onground-p {
 			@include gridColRow(col-2,col-6,row-4,row-7);
 			font-size: 3rem;

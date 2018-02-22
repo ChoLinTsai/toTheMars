@@ -1,10 +1,10 @@
 section#section-immigration-container {
 	@include wh(normal, 100vw, 100vh);
-	@include bgimg('../img/section-immigration-bg.jpg',
-	no-repeat, center, bottom, cover, fixed);
+	@include bgimg('../img/section-immigration-bg.jpg', no-repeat, center, bottom, cover, fixed);
 	overflow: hidden;
 	color: #fff;
 	@include gridTempColsRows(12);
+
 	h1#section-immi-h1 {
 		margin: 0;
 		padding: 0;
@@ -16,6 +16,7 @@ section#section-immigration-container {
 		letter-spacing: 0.5rem;
 		transition: all 0.3s ease-in-out;
 	}
+
 	h2#section-immi-h2 {
 		margin: 0;
 		padding: 0;
@@ -27,6 +28,7 @@ section#section-immigration-container {
 		letter-spacing: 0.5rem;
 		transition: all 0.3s ease-in-out;
 	}
+
 	ul#section-immi-ul {
 		@include gridColRow(col-2,col-5,row-5,row-6);
 		@include gridItemPosition(start, start);

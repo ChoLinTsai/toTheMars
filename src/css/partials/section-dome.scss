@@ -1,10 +1,10 @@
 section#section-dome-container {
 	@include wh(normal, 100vw, 100vh);
-	@include bgimg('../img/section-dome-bg.jpg',
-	no-repeat, center, bottom, cover, fixed);
+	@include bgimg('../img/section-dome-bg.jpg', no-repeat, center, bottom, cover, fixed);
 	overflow: hidden;
 	@include gridTempColsRows(12);
 	color: #fff;
+
 	h1#section-dome-h1 {
 		@include wh(normal, 100%, 100%);
 		@include gridColRow(col-10,col-13,row-5,row-6);
@@ -17,6 +17,7 @@ section#section-dome-container {
 		letter-spacing: 0.5rem;
 		transition: all 0.3s ease-in-out;
 	}
+
 	p#section-dome-p {
 		@include wh(normal, 100%, 100%);
 		@include gridColRow(col-10,col-13,row-6,row-12);
@@ -26,7 +27,6 @@ section#section-dome-container {
 		transition: all 0.3s ease-in-out;
 	}
 }
-
 
 .sec-dome-offset {
 	opacity: 0;
