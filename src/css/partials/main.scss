@@ -1,11 +1,12 @@
 main#main-container {
 	@include wh(normal, 100vw, 100vh);
-	@include bgimg('../img/main-bg.jpg',
-	no-repeat, center, center, cover, fixed);
+	@include bgimg('../img/main-bg.jpg', no-repeat, center, center, cover, fixed);
 	overflow: hidden;
+
 	div#main-wrapper {
 		@include wh(normal, 100vw, 100vh);
 		@include gridTempColsRows(8);
+
 		h1#main-h1 {
 			@include wh(normal, 100%, 100%);
 			@include gridColRow(col-2, col-8, row-3, row-4);
@@ -18,6 +19,7 @@ main#main-container {
 			text-align: center;
 			transition: all 0.35s ease-in-out;
 		}
+
 		p#main-p {
 			@include wh(normal, 100%, 100%);
 			@include gridColRow(col-3, col-7, row-4, row-5);

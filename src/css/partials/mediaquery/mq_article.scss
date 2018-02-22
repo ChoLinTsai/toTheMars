@@ -4,21 +4,21 @@
 		@include wh(normal, 100vw, 350px);
 	}
 }
-
 /* media query for normal laptop */
 @media screen and (max-width: 1024px) {
-	article#article-container{
+	article#article-container {
 		@include wh(normal, 100vw, 300px);
+
 		h2#article-h2 {
 			font-size: 3.5rem;
 		}
 	}
 }
-
 /* media query for tablet */
 @media screen and (max-width: 768px) {
-	article#article-container{
+	article#article-container {
 		@include wh(normal, 100vw, 250px);
+
 		h2#article-h2 {
 			font-size: 2.5rem;
 		}

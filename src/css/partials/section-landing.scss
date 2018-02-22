@@ -4,15 +4,17 @@ section#section-landing-container {
 	overflow: hidden;
 	@include flex(center, center);
 	flex-direction: column;
+
 	h2#section-landing-h2 {
-			margin: 0;
-			padding-top: 5rem;
-			color: #fff;
-			font-family: 'exo2-black';
-			font-size: 5rem;
-			text-transform: uppercase;
-			transition: all 0.3s ease-in-out;
+		margin: 0;
+		padding-top: 5rem;
+		color: #fff;
+		font-family: 'exo2-black';
+		font-size: 5rem;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in-out;
 	}
+
 	p#section-landing-p {
 		margin: 0;
 		padding-top: 5rem;

@@ -5,19 +5,22 @@ aside#aside-container {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+
 	div#aside-panel {
 		padding: 1rem;
 		@include wh(normal, 1200px, 300px);
 		@include gridTempColsRows(6);
 		grid-column-gap: 1rem;
 		overflow: hidden;
+
 		section#aside-section-1 {
 			@include gridColRow(col-3,col-5,row-1,row-7);
 		}
+
 		section#aside-section-2 {
 			@include gridColRow(col-1,col-3,row-1,row-7);
-
 		}
+
 		section#aside-section-3 {
 			@include gridColRow(col-5,col-7,row-1,row-7);
 		}
@@ -29,6 +32,7 @@ aside#aside-container {
 	color: #453246;
 	transition: all 0.5s ease-in-out;
 	border-radius: 5%;
+
 	h1 {
 		letter-spacing: 0.25rem;
 		text-align: center;
@@ -36,6 +40,7 @@ aside#aside-container {
 		font-size: 3rem;
 		margin-bottom: 2rem;
 	}
+
 	p {
 		padding: 1.5rem;
 		text-align: left;

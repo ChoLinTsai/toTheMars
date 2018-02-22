@@ -2,38 +2,42 @@
 @media screen and (max-width: 1440px) {
 	section#section-phase3-container {
 		@include wh(normal, 100vw, 350px);
+
 		h1#section-phase3-h1 {
 			font-size: 9rem;
 			margin-bottom: 4rem;
 		}
+
 		p#section-phase3-p {
 			font-size: 7rem;
 		}
 	}
 }
-
 /* media query for normal laptop */
 @media screen and (max-width: 1024px) {
 	section#section-phase3-container {
 		@include wh(normal, 100vw, 300px);
+
 		h1#section-phase3-h1 {
 			font-size: 8rem;
 			margin-bottom: 3.5rem;
 		}
+
 		p#section-phase3-p {
 			font-size: 6rem;
 		}
 	}
 }
-
 /* media query for tablet */
 @media screen and (max-width: 768px) {
 	section#section-phase3-container {
 		@include wh(normal, 100vw, 250px);
+
 		h1#section-phase3-h1 {
 			font-size: 7rem;
 			margin-bottom: 3rem;
 		}
+
 		p#section-phase3-p {
 			font-size: 5rem;
 		}

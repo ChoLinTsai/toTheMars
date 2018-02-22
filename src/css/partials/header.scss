@@ -1,9 +1,9 @@
 header#header-container {
 	@include wh(normal, 100vw, 100vh);
-	@include bgimg('../img/header-bg.jpg',
-	no-repeat, center, center, cover, fixed);
+	@include bgimg('../img/header-bg.jpg', no-repeat, center, center, cover, fixed);
 	@include gridTempColsRows(8);
 	position: relative;
+
 	h1#header-h1 {
 		@include gridColRow(col-2,col-6,row-2,row-3);
 		position: fixed;
@@ -17,10 +17,12 @@ header#header-container {
 		letter-spacing: 2rem;
 		text-transform: uppercase;
 		transition: all 0.3s ease-in-out;
+
 		span {
 			color: #EE2B47;
 		}
 	}
+
 	p#header-p {
 		letter-spacing: 1rem;
 		line-height: 1.5;
@@ -35,6 +37,7 @@ header#header-container {
 		@include gridColRow(col-3,col-6,row-4,row-6);
 		transition: all 0.3s ease-in-out;
 	}
+
 	p.header-arrow {
 		position: absolute;
 		margin: 0;
@@ -48,7 +51,6 @@ header#header-container {
 		transition: all 0.2s ease-in-out;
 	}
 }
-
 
 .header-h1-slide-right {
 	opacity: 0;
@@ -68,16 +70,17 @@ header#header-container {
 .arrow-animation {
 	animation: redArrow 1.5s infinite ease-in-out forwards;
 }
-
 @keyframes redArrow {
 	0% {
 		color: white;
 		transform: scale(1.1);
 	}
+
 	50% {
 		color: #EE2B47;
 		transform: scale(1.15);
 	}
+
 	100% {
 		color: white;
 		transform: scale(1.1);

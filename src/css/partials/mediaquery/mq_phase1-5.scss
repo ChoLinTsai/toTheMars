@@ -2,50 +2,57 @@
 @media screen and (max-width: 1440px) {
 	section#section-phase1-5-container {
 		@include wh(normal, 100vw, 350px);
+
 		div {
 			h2#section-phase1-5-h2 {
 				font-size: 9rem;
 			}
+
 			h3#pt5 {
 				font-size: 9rem;
 			}
 		}
+
 		p#section-phase1-5-p {
 			font-size: 9rem;
 		}
 	}
 }
-
 /* media query for normal laptop */
 @media screen and (max-width: 1024px) {
 	section#section-phase1-5-container {
 		@include wh(normal, 100vw, 300px);
+
 		div {
 			h2#section-phase1-5-h2 {
 				font-size: 8rem;
 			}
+
 			h3#pt5 {
 				font-size: 8rem;
 			}
 		}
+
 		p#section-phase1-5-p {
 			font-size: 8rem;
 		}
 	}
 }
-
 /* media query for tablet */
 @media screen and (max-width: 768px) {
 	section#section-phase1-5-container {
 		@include wh(normal, 100vw, 250px);
+
 		div {
 			h2#section-phase1-5-h2 {
 				font-size: 6rem;
 			}
+
 			h3#pt5 {
 				font-size: 6rem;
 			}
 		}
+
 		p#section-phase1-5-p {
 			font-size: 6rem;
 		}
